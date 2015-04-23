@@ -126,6 +126,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  color: $body-text;
 }
 
 /**
@@ -135,6 +136,7 @@ body {
  * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
  */
 a:link {
+  text-decoration: none;
 }
 a:visited {
 }

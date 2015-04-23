@@ -26,6 +26,12 @@
   overflow: auto;
 }
 
+// Resets margin and padding
+@mixin zero{
+   margin: 0;
+   padding: 0;
+ }
+
 // Makes an element visually hidden by default, but visible when focused.
 @mixin element-focusable {
   @include element-invisible;
@@ -34,4 +40,41 @@
   &:focus {
     @include element-invisible-off;
   }
+}
+
+// Anti Aliasing for light colors on dark backgrounds
+ @mixin anti-aliasing{
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+
+// Buttons
+@mixin primary-btn {
+  @include anti-aliasing;
+  font-weight: bold;
+  color: $white;
+  padding: .25em 1.5em;
+  border-radius: 3px;
+  border: 1px solid $btn-blue-border;
+  vertical-align: middle;
+  background: $btn-light-blue;
+  background-image: -webkit-linear-gradient(top, $btn-light-blue, $btn-dark-blue);
+  background-image: -moz-linear-gradient(top, $btn-light-blue, $btn-dark-blue);
+  background-image: -ms-linear-gradient(top, $btn-light-blue, $btn-dark-blue);
+  background-image: -o-linear-gradient(top, $btn-light-blue, $btn-dark-blue);
+  background-image: linear-gradient(to bottom, $btn-light-blue, $btn-dark-blue);
+}
+
+@mixin secondary-btn {
+  color: $body-text;
+  padding: .25em 1.5em;
+  border-radius: 3px;
+  background: #ebebeb;
+  background-image: -webkit-linear-gradient(top, $btn-light-grey, $btn-dark-grey);
+  background-image: -moz-linear-gradient(top, $btn-light-grey, $btn-dark-grey);
+  background-image: -ms-linear-gradient(top, $btn-light-grey, $btn-dark-grey);
+  background-image: -o-linear-gradient(top, $btn-light-grey, $btn-dark-grey);
+  background-image: linear-gradient(to bottom, $btn-light-grey, $btn-dark-grey);
+  border: 1px solid $btn-grey-border;
+  vertical-align: middle;
 }
