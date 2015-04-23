@@ -1,0 +1,41 @@
+h2 {
+
+}
+
+h3 {
+    padding-bottom: 10px;
+    position: relative;
+    color: $grey-text;
+    font-weight: 300;
+}
+
+h3:after {
+    content: " ";
+    border-bottom: 3px solid;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+}
+
+h4 {
+	border-bottom: 1px solid;
+}
+
+a:link {
+  color: #0d70aa;
+}
+a:visited {
+  color: #555;
+}
+a:hover,
+a:focus {
+  color: #555;
+}
+a:active {
+  color: #555;
+}
+
+label.option {
+	margin-left: .25em;
+}
