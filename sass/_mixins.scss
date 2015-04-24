@@ -51,7 +51,6 @@
 // Buttons
 @mixin primary-btn {
   @include anti-aliasing;
-  font-weight: bold;
   color: $white;
   padding: .25em 1.5em;
   border-radius: 3px;
@@ -77,4 +76,14 @@
   background-image: linear-gradient(to bottom, $btn-light-grey, $btn-dark-grey);
   border: 1px solid $btn-grey-border;
   vertical-align: middle;
+}
+
+@mixin login-btn {
+  @include anti-aliasing;
+  background-color: $btn-light-blue;
+  color: $white;
+  padding: 1em 1.5em;
+  border-radius: 0;
+  border: 0;
+
 }

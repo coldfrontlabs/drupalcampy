@@ -15,6 +15,9 @@
 /* Layout rules */
 @import "layouts/responsive";
 
+/* Custom Font */
+@important "components/drupalcamp-font";
+
 /* Component (SMACSS module) rules */
 @import "components/misc";
 @import "components/typography";

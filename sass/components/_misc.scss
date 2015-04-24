@@ -685,14 +685,24 @@ form {
     margin: 0;
   }
 }
+
+table td {
+  padding: .5em;
+}
+
+thead {
+  border-bottom: 3px solid $light-grey;
+  font-size: 1.25em;
+  @include anti-aliasing
+}
 tr.even,
 tr.odd {
-  background-color: #eee;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $btn-grey-border;
   padding: 0.1em 0.6em;
 }
-tr.even {
-  background-color: #fff;
+
+tr:hover {
+  background-color: $btn-light-grey;
 }
 @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
   .lt-ie8 tr.even,

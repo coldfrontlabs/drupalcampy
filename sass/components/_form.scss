@@ -1,3 +1,12 @@
+input[type="text"] {
+  height: 29px;
+  margin-right: 1em;
+}
+
+.btn-sponsor {
+  @include primary-btn;
+}
+
 button,
 html input[type="button"],
 input[type="reset"],
@@ -7,6 +16,7 @@ input[type="submit"] {
 
 #edit-cancel {
   @include secondary-btn;
+  margin-left: 1em;
 }
 
 button, input, select, textarea {
@@ -29,7 +39,7 @@ button, input, select, textarea {
 }
 
 fieldset {
-  margin: 1em 0;
+  margin: 1em;
   margin-top: 1em;
   border: 1px solid #ccc;
 }
@@ -60,4 +70,8 @@ legend {
 
 .fieldset-wrapper {
   padding: 1em;
+}
+
+.filter-wrapper {
+  border: 1px solid $light-grey;
 }
