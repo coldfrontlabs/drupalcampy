@@ -17,7 +17,33 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
-    // Place your code here.
+      // Add Close Button
+    $('.header__mobile-secondary-menu').once('added-close-button', function(){
+      $(this).before('<a class="btn-close">' + '<i class="i-cancel"></i><span>' + Drupal.t('Close') + '</span></a>');
+    });
+
+    //Close Toggle
+    $('.slide-menu .btn-close').click(function(e){
+      if ($('#page').attr('data-state') == 'slide-open') {
+        $('#page').attr('data-state', 'slide-closed');
+      }
+      else {
+        $('#page').attr('data-state', 'slide-open');
+      }
+      e.preventDefault();
+    });
+
+    // Menu Toggle
+    $('.menu-toggle').click(function(e){
+      if ($('#page').attr('data-state') == 'slide-open') {
+        $('#page').attr('data-state', 'slide-closed');
+      }
+      else {
+        $('#page').attr('data-state', 'slide-open');
+      }
+      e.preventDefault();
+    });
+
 
   }
 };
