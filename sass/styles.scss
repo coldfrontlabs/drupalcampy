@@ -16,7 +16,7 @@
 @import "layouts/responsive";
 
 /* Custom Font */
-@important "components/drupalcamp-font";
+@import "components/drupalcamp-font";
 
 /* Component (SMACSS module) rules */
 @import "components/misc";

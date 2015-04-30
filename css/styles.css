@@ -858,7 +858,245 @@ table {
   }
 }
 /* Custom Font */
-@important "components/drupalcamp-font";
+@font-face {
+  font-family: 'drupalcamp-font';
+  src: url("../font/drupalcamp-font.eot?13527939");
+  src: url("../font/drupalcamp-font.eot?13527939#iefix") format("embedded-opentype"), url("../font/drupalcamp-font.woff?13527939") format("woff"), url("../font/drupalcamp-font.ttf?13527939") format("truetype"), url("../font/drupalcamp-font.svg?13527939#drupalcamp-font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'drupalcamp-font';
+    src: url('../font/drupalcamp-font.svg?41964514#drupalcamp-font') format('svg');
+  }
+}
+*/
+/* line 22, ../sass/components/_drupalcamp-font.scss */
+[class^="i-"]:before, [class*=" i-"]:before {
+  font-family: "drupalcamp-font";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+/* line 57, ../sass/components/_drupalcamp-font.scss */
+.i-menu:before {
+  content: '\e800';
+}
+
+/* '' */
+/* line 58, ../sass/components/_drupalcamp-font.scss */
+.i-heart-empty:before {
+  content: '\e801';
+}
+
+/* '' */
+/* line 59, ../sass/components/_drupalcamp-font.scss */
+.i-star-empty:before {
+  content: '\e802';
+}
+
+/* '' */
+/* line 60, ../sass/components/_drupalcamp-font.scss */
+.i-star:before {
+  content: '\e803';
+}
+
+/* '' */
+/* line 61, ../sass/components/_drupalcamp-font.scss */
+.i-ok:before {
+  content: '\e804';
+}
+
+/* '' */
+/* line 62, ../sass/components/_drupalcamp-font.scss */
+.i-left-open-mini:before {
+  content: '\e805';
+}
+
+/* '' */
+/* line 63, ../sass/components/_drupalcamp-font.scss */
+.i-right-open-mini:before {
+  content: '\e806';
+}
+
+/* '' */
+/* line 64, ../sass/components/_drupalcamp-font.scss */
+.i-up-open-mini:before {
+  content: '\e807';
+}
+
+/* '' */
+/* line 65, ../sass/components/_drupalcamp-font.scss */
+.i-down-open-big:before {
+  content: '\e808';
+}
+
+/* '' */
+/* line 66, ../sass/components/_drupalcamp-font.scss */
+.i-cog:before {
+  content: '\e809';
+}
+
+/* '' */
+/* line 67, ../sass/components/_drupalcamp-font.scss */
+.i-linux:before {
+  content: '\e80a';
+}
+
+/* '' */
+/* line 68, ../sass/components/_drupalcamp-font.scss */
+.i-tint:before {
+  content: '\e80b';
+}
+
+/* '' */
+/* line 69, ../sass/components/_drupalcamp-font.scss */
+.i-right:before {
+  content: '\e80c';
+}
+
+/* '' */
+/* line 70, ../sass/components/_drupalcamp-font.scss */
+.i-briefcase:before {
+  content: '\e80d';
+}
+
+/* '' */
+/* line 71, ../sass/components/_drupalcamp-font.scss */
+.i-location-circled:before {
+  content: '\e80e';
+}
+
+/* '' */
+/* line 72, ../sass/components/_drupalcamp-font.scss */
+.i-comment-inv-alt2:before {
+  content: '\e80f';
+}
+
+/* '' */
+/* line 73, ../sass/components/_drupalcamp-font.scss */
+.i-left-open-big:before {
+  content: '\e810';
+}
+
+/* '' */
+/* line 74, ../sass/components/_drupalcamp-font.scss */
+.i-twitter-circled:before {
+  content: '\e811';
+}
+
+/* '' */
+/* line 75, ../sass/components/_drupalcamp-font.scss */
+.i-facebook-circled:before {
+  content: '\e812';
+}
+
+/* '' */
+/* line 76, ../sass/components/_drupalcamp-font.scss */
+.i-right-open-big:before {
+  content: '\e813';
+}
+
+/* '' */
+/* line 77, ../sass/components/_drupalcamp-font.scss */
+.i-up-open-big:before {
+  content: '\e814';
+}
+
+/* '' */
+/* line 78, ../sass/components/_drupalcamp-font.scss */
+.i-right-small:before {
+  content: '\e815';
+}
+
+/* '' */
+/* line 79, ../sass/components/_drupalcamp-font.scss */
+.i-code:before {
+  content: '\e816';
+}
+
+/* '' */
+/* line 80, ../sass/components/_drupalcamp-font.scss */
+.i-cancel-circled:before {
+  content: '\e817';
+}
+
+/* '' */
+/* line 81, ../sass/components/_drupalcamp-font.scss */
+.i-direction:before {
+  content: '\e818';
+}
+
+/* '' */
+/* line 82, ../sass/components/_drupalcamp-font.scss */
+.i-chat-empty:before {
+  content: '\e819';
+}
+
+/* '' */
+/* line 83, ../sass/components/_drupalcamp-font.scss */
+.i-direction-1:before {
+  content: '\e81a';
+}
+
+/* '' */
+/* line 84, ../sass/components/_drupalcamp-font.scss */
+.i-phone:before {
+  content: '\e81b';
+}
+
+/* '' */
+/* line 85, ../sass/components/_drupalcamp-font.scss */
+.i-drupal:before {
+  content: '\e81c';
+}
+
+/* '' */
+/* line 86, ../sass/components/_drupalcamp-font.scss */
+.i-facebook:before {
+  content: '\e81d';
+}
+
+/* '' */
+/* line 87, ../sass/components/_drupalcamp-font.scss */
+.i-github-circled:before {
+  content: '\e81e';
+}
+
+/* '' */
+/* line 88, ../sass/components/_drupalcamp-font.scss */
+.i-cancel:before {
+  content: '\e81f';
+}
+
+/* '' */
 /* Component (SMACSS module) rules */
 /**
  * @file
@@ -1694,7 +1932,7 @@ tr.selected td {
 /* line 813, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1398863088');
+  background-image: url('../images/progress.gif?1430236137');
 }
 
 /* line 1, ../sass/components/_typography.scss */
