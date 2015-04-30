@@ -11,12 +11,12 @@
 // - https://drupal.org/node/1446420
 // - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
 (function ($, Drupal, window, document, undefined) {
-
+ 
 
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
-
+    countdown(2015,6,16,0,0);
       // Add Close Button
     $('.header__mobile-secondary-menu').once('added-close-button', function(){
       $(this).before('<a class="btn-close">' + '<i class="i-cancel"></i><span>' + Drupal.t('Close') + '</span></a>');
