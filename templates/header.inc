@@ -68,7 +68,7 @@
          <div class="slide-menu">
             <div id="mobile_navigation">
               <?php if ($secondary_menu): ?>
-                <nav class="header__mobile-secondary-menu" id="secondary-menu" role="navigation">
+                <nav class="header__mobile-secondary-menu" id="mobile-secondary-menu" role="navigation">
                   <?php print theme('links__system_secondary_menu', array(
                     'links' => $secondary_menu,
                     'attributes' => array(
@@ -84,7 +84,7 @@
               <?php endif; ?>
 
               <?php if ($main_menu): ?>
-                <nav id="main-menu" role="navigation">
+                <nav id="mobile-main-menu" role="navigation">
                   <?php
                   // This code snippet is hard to modify. We recommend turning off the
                   // "Main menu" on your sub-theme's settings form, deleting this PHP
@@ -112,12 +112,14 @@
         <?php print render($page['header']); ?>
 
       </div> <!-- full-width-wrapper -->
-    </header>
 
     <section class="banner">
       <?php if ($site_slogan): ?>
         <h2 class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></h2>
       <?php endif; ?>
     </section>
+    
+    </header>
+
 
     <div id="main">
