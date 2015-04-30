@@ -120,6 +120,20 @@ $btn-dark-grey: #dfdfdf;
 $btn-grey-border: #dadada;
 
 
+// Media Query Variables
+// Usage: 
+// @media #{$mobile} {
+//   background: red;
+// }
+$mobile: "only screen and (min-width: 20em)"; //320px
+$mobile-landscape: "only screen and (min-width: 30em)"; //480px
+$tablet: "only screen and (min-width: 37.5em)"; //600px
+$tablet-landscape: "only screen and (min-width: 60em)"; //960px
+$desktop-small: "only screen and (min-width: 75em)"; //1200px
+$desktop: "only screen and (min-width: 87.5em)"; //1400px
+$desktop-large: "only screen and (min-width: 100em)"; //1600px
+$desktop-xlarge: "only screen and (min-width: 110em)"; //1760px
+
 // =============================================================================
 // Partials to be shared with all .scss files.
 // =============================================================================

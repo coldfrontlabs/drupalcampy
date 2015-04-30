@@ -163,6 +163,103 @@
   }
 }
 
+
+/**
+ *  Time countdown
+ */
+
+.header__inside{
+  position: relative;
+  float: right;
+  top: 1em;
+  @extend .cf;
+  .header__secondary-menu{
+    float: right;
+    ul, li{
+      @include zero;
+    }
+    li{
+      float: left;
+      font-size: 0;
+      font-size: 1em;
+      &:last-child a{
+        border-right: 0;
+      }
+    }
+    a{
+      border-right: 1px solid darken($btn-dark-blue, 10%);
+      height: 50px;
+      display: inline-block; 
+      padding: .75em 1em;
+
+      @include box-sizing(border-box);
+      background-color: $btn-dark-blue;
+      color: #fff;
+      @include anti-aliasing;
+      @include ease(background-color, 150ms, ease-in-out);
+      &:hover,
+      &:focus{
+        background-color: darken($btn-dark-blue, 10%);
+      }
+    }
+  }
+}
+
+// Hide desktop menus on mobile
+.header__inside, 
+#main #navigation{
+  display: none;
+  @media #{$tablet-landscape}{
+    display: block;
+  }
+}
+
+
+.numbers {
+  width: 55px;
+  text-align: center; 
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  color: #000;
+}
+
+.title {
+  border: none;    
+  padding: 0px;
+  width: 55px;
+  text-align: center; 
+  font-size: 11px; 
+  font-weight: normal;
+  color: #000;
+  text-transform: uppercase;
+
+}
+
+#days, #day{
+  width: 40px;
+}
+
+#seconds, #sec{
+  width: 65px;
+}
+
+#timer {
+  position: relative;
+  padding: 0 2em;
+  float: left;
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+  ul {
+    @include zero;
+  }
+}
+
+
+
+
 /**
  * Breadcrumb navigation.
  */
