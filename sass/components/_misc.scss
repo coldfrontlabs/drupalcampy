@@ -168,9 +168,12 @@
 .header__bar{
   @include background(rgba(0,0,0,.1));
   @extend .cf;
+  height: 60px;
   //padding-bottom: .5em;
 }
-
+iframe{
+  width: 100%;
+}
 /**
  * Navigation bar.
  */
@@ -1072,15 +1075,16 @@ tr.selected td {
   }
 }
 
-// Resets page when desktop, even if nav is toggled open
-.slide-menu{
-  @media #{$tablet-landscape} {
-   position: static;
-   right: auto;
-  }
-}
 
-#mobile_navigation{
-  display: none;
+
+@media #{$tablet-landscape} {
+  // Resets page when desktop, even if nav is toggled open
+  .slide-menu{
+    position: static;
+    right: auto;
+  }
+  #mobile_navigation{
+    display: none;
+  }
 }
 
