@@ -13,18 +13,14 @@
 
 
     <header class="header" id="header" role="banner">
-      <div class="full-width-wrapper">
-        <?php if ($logo): ?>
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
-        <?php endif; ?>
+      <div class="header__bar">
+        <div class="full-width-wrapper">
 
-        <?php if ($site_name || $site_slogan): ?>
+        <?php if ($site_name): ?>
           <div class="header__name-and-slogan" id="name-and-slogan">
-            <?php if ($site_name): ?>
               <h1 class="header__site-name" id="site-name">
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link" rel="home"><span><?php print $site_name; ?></span></a>
               </h1>
-            <?php endif; ?>
           </div>
         <?php endif; ?>
 
@@ -60,6 +56,7 @@
               )); ?>
             </nav>
           <?php endif; ?>
+
         </div> <!-- header__inside -->
 
         <!-- Menu Toggle Icon -->
@@ -112,7 +109,7 @@
         <?php print render($page['header']); ?>
 
       </div> <!-- full-width-wrapper -->
-
+    </div> <!-- header__bar -->
     <section class="banner">
       <?php if ($site_slogan): ?>
         <h2 class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></h2>

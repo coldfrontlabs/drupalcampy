@@ -112,11 +112,29 @@
 /* The name of the website. */
 .header__site-name {
   margin: 0;
-  @include adjust-font-size-to( $h1-font-size );
+
 }
 
 /* The link around the name of the website. */
 .header__site-link {
+  @include adjust-font-size-to( $h1-font-size );
+  text-transform: uppercase;
+  @include rem-fallback(font-size, 1.125);
+  font-weight: bold;
+  letter-spacing: .5px;
+  //background: red;
+  padding: 1em;
+  @include opacity(.9);
+  @include ease(background, 150ms, ease-in-out);
+  &:before{
+    content: " ";
+    height: 40px;
+    width: 35px;
+    display: inline-block;
+    vertical-align: -12px;
+    margin-right: .5em;
+    @include vector-bg-with-fallback(dc-logo);
+  }
   &:link,
   &:visited {
     color: #000;
@@ -125,7 +143,9 @@
 
   &:hover,
   &:focus {
-    text-decoration: underline;
+    @include opacity(1);
+
+    @include background(rgba(0,0,0, 0.1));
   }
 }
 
@@ -143,6 +163,12 @@
 .header__region {
   /* Clear the logo. */
   clear: both;
+}
+
+.header__bar{
+  @include background(rgba(0,0,0,.1));
+  @extend .cf;
+  //padding-bottom: .5em;
 }
 
 /**
@@ -186,7 +212,7 @@
 .header__inside{
   position: relative;
   float: right;
-  top: 1em;
+  top: 0;
   @extend .cf;
   .header__secondary-menu{
     float: right;
@@ -203,9 +229,9 @@
     }
     a{
       border-right: 1px solid darken($btn-dark-blue, 10%);
-      height: 50px;
+      height: 60px;
       display: inline-block; 
-      padding: .75em 1em;
+      padding: 1em 1em;
 
       @include box-sizing(border-box);
       background-color: $btn-dark-blue;
@@ -270,6 +296,7 @@
 
 #timer {
   position: relative;
+  top: .5em;
   padding: 0 2em;
   float: left;
   li {
@@ -278,6 +305,7 @@
   }
   ul {
     @include zero;
+    margin: 0 0 -5px;
   }
 }
 
