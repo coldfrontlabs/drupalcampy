@@ -116,7 +116,8 @@
 }
 
 /* The link around the name of the website. */
-.header__site-link {
+ 
+#site-name a {
   @include adjust-font-size-to( $h1-font-size );
   text-transform: uppercase;
   @include rem-fallback(font-size, 1.125);
@@ -1106,5 +1107,59 @@ tr.selected td {
   #mobile_navigation{
     display: none;
   }
+}
+
+
+#footer{
+  .block-title{
+    @include element-invisible;
+  }
+  #site-name{
+    text-align: center;
+    a{
+      color: $body-text;
+    }
+  }
+}
+
+#block-menu-menu-footer-menu, 
+#block-menu-menu-social-menu{
+  display: block;
+  margin: 0;
+  ul{
+    @include zero;
+    li{
+      list-style-image: none;
+      list-style-type: none;
+      margin: .5em 0;
+    }
+  }
+  @media #{$tablet-landscape}{
+    display: table;
+    ul li{
+      display: inline-block;
+      margin: 0 1em;
+    }
+  }
+}
+
+#block-menu-menu-social-menu a{
+  visibility: hidden;
+  &:before{
+    visibility: visible;
+    @extend .icon;
+  }
+}
+
+.facebook:before{
+  @extend .i-facebook;
+}
+
+.twitter:before{
+  @extend .i-twitter;
+}
+
+.drupal{
+  @extend .i-drupal;
 }
 

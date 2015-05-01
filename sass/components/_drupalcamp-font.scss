@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'drupalcamp-font';
-  src: url('../font/drupalcamp-font.eot?13527939');
-  src: url('../font/drupalcamp-font.eot?13527939#iefix') format('embedded-opentype'),
-       url('../font/drupalcamp-font.woff?13527939') format('woff'),
-       url('../font/drupalcamp-font.ttf?13527939') format('truetype'),
-       url('../font/drupalcamp-font.svg?13527939#drupalcamp-font') format('svg');
+  src: url('../font/drupalcamp-font.eot?60041431');
+  src: url('../font/drupalcamp-font.eot?60041431#iefix') format('embedded-opentype'),
+       url('../font/drupalcamp-font.woff?60041431') format('woff'),
+       url('../font/drupalcamp-font.ttf?60041431') format('truetype'),
+       url('../font/drupalcamp-font.svg?60041431#drupalcamp-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -19,7 +19,7 @@
 }
 */
 
- [class^="i-"]:before, [class*=" i-"]:before {
+ [class^="i-"]:before, [class*=" i-"]:before, .icon {
   font-family: "drupalcamp-font";
   font-style: normal;
   font-weight: normal;
@@ -71,8 +71,7 @@
 .i-location-circled:before { content: '\e80e'; } /* '' */
 .i-comment-inv-alt2:before { content: '\e80f'; } /* '' */
 .i-left-open-big:before { content: '\e810'; } /* '' */
-.i-twitter-circled:before { content: '\e811'; } /* '' */
-.i-facebook-circled:before { content: '\e812'; } /* '' */
+.i-twitter:before { content: '\e811'; } /* '' */
 .i-right-open-big:before { content: '\e813'; } /* '' */
 .i-up-open-big:before { content: '\e814'; } /* '' */
 .i-right-small:before { content: '\e815'; } /* '' */
