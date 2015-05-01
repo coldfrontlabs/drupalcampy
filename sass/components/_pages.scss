@@ -1,5 +1,53 @@
 
 .banner{
-  background-color: #d6f6ff;
-  padding: 10em 0 ;
+  background: url('../images/main-banner.jpg');
+  background-position: center -50px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  @media #{$desktop-xlarge} {
+    background-size: 100%;
+  }  
+  .pattern{
+    height: 100%;
+    width: 100%;
+      padding: 4em 0 ;
+      @media #{$tablet} {
+        padding: 3em 0 ;
+      }
+      @media #{$desktop} {
+        padding: 6em 0 ;
+      }
+      @media #{$desktop-xlarge} {
+        padding: 8em 0 ;
+      } 
+  }
+}
+
+.front{
+
+.banner{
+  background: url('../images/main-banner.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  @media #{$desktop-xlarge} {
+    background-position: top center;
+    background-size: 100%;
+  }  
+  .pattern{
+    height: 100%;
+    width: 100%;
+      padding: 5em 0 ;
+      @media #{$desktop} {
+        padding: 10em 0 ;
+      }
+      @media #{$desktop-xlarge} {
+        padding: 12em 0 ;
+      } 
+  }
+}
+}
+
+.pattern{
+  background: transparent url('../images/pattern.png') repeat top left;
 }

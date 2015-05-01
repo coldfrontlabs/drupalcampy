@@ -25,6 +25,8 @@
           <?php endif; ?>
 
           <div class="header__inside">
+
+            <div class="timer-text"><?php print t('The Conference Begins In:'); ?></div>
             <div id="timer">
               <div class="numbers" id="count2"></div>
               <ul>

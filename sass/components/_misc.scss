@@ -116,7 +116,12 @@
 }
 
 /* The link around the name of the website. */
- 
+.header #site-name a{
+  @include rem-fallback(font-size, .875);
+  @media #{$mobile-landscape} {
+    @include rem-fallback(font-size, 1.125);
+  }
+}
 #site-name a {
   @include adjust-font-size-to( $h1-font-size );
   text-transform: uppercase;
@@ -138,14 +143,13 @@
   }
   &:link,
   &:visited {
-    color: #000;
+    color: #222;
     text-decoration: none;
   }
 
   &:hover,
   &:focus {
     @include opacity(1);
-
     @include background(rgba(0,0,0, 0.1));
   }
 }
@@ -167,7 +171,6 @@
 }
 
 .header__bar{
-  @include background(rgba(0,0,0,.1));
   @extend .cf;
   height: 60px;
   //padding-bottom: .5em;
@@ -266,14 +269,17 @@ iframe{
   text-align: center; 
   font-size: 11px; 
   font-weight: normal;
-  color: #000;
+  color: #222;
   text-transform: uppercase;
 }
 
 #timer {
   position: relative;
-  top: .5em;
-  padding: 0 2em;
+  top: .6em;
+  padding: 0 1.5em 0 .5em;
+  @media #{$desktop} {
+    padding: 0 2em 0 1.5em;
+  }
   float: left;
   li {
     list-style: none;
@@ -285,13 +291,21 @@ iframe{
   }
 }
 
+.timer-text{
+  float: left; 
+  clear: none;
+  @include rem-fallback(font-size, .875);
+  margin: 1.25em 0;
+  color: #222;
+}
+
 .numbers {
   width: 55px;
   text-align: center; 
   font-size: 17px;
   font-style: normal;
-  font-weight: 300;
-  color: #000;
+  font-weight: bold;
+  color: #222;
 }
 
 #days, #day{
@@ -326,6 +340,7 @@ iframe{
       padding: .75em 2em;
       @include background(rgba(0,0,0,0));
       @include ease(background, 150ms, ease-in-out);
+
       &:hover, 
       &:focus{
         @include background(rgba(0,0,0,0.15));
@@ -334,7 +349,15 @@ iframe{
     }
   }
 }
-
+@media #{$desktop} {
+  #main-menu .links li a{
+    @include rem-fallback(font-size, 1.125);
+    padding: .9em 2em;
+  }
+  #navigation{
+    height: 3.5em;
+  }
+}
 
 /**
  * Breadcrumb navigation.
@@ -994,7 +1017,7 @@ tr.selected td {
 .menu-toggle:visited{
   position: absolute;
   top: .5em;
-  right: 1em;
+  right: .75em;
   color: $grey-text;
   border: 1px solid rgba(0, 0, 0, 0.2);
   &:hover, 
@@ -1009,7 +1032,7 @@ tr.selected td {
 .btn:visited{
   color: $grey-text;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  margin: .5em 1em;
+  margin: .5em .75em;
   display: inline-block;
   &:hover, 
   &:focus, 
@@ -1038,7 +1061,7 @@ tr.selected td {
  */
 
 // Page should move when nav opens
-@media only screen and (max-width: 60em){
+@media only screen and (max-width: 959px){
   #page{
   position: relative;
   overflow: hidden;
@@ -1116,6 +1139,7 @@ tr.selected td {
   }
   #site-name{
     text-align: center;
+    display: block;
     a{
       color: $body-text;
     }
