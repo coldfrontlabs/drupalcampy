@@ -631,7 +631,7 @@ table {
  * by setting a max-width.
  */
 /* line 34, ../sass/layouts/_responsive.scss */
-#page,
+.full-width-wrapper,
 .region-bottom {
   margin-left: auto;
   margin-right: auto;
@@ -640,7 +640,6 @@ table {
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
 /* line 46, ../sass/layouts/_responsive.scss */
-#header,
 #content,
 #navigation,
 .region-sidebar-first,
@@ -1255,7 +1254,7 @@ table {
   font-size: 1.125rem;
   font-weight: bold;
   letter-spacing: .5px;
-  padding: 1em;
+  padding: 1.1em;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
   -webkit-transition: background 150ms ease-in-out;
@@ -1412,27 +1411,8 @@ iframe {
   }
 }
 
-/* line 263, ../sass/components/_misc.scss */
-#main-menu {
-  background-color: #ebebeb;
-}
-/* line 265, ../sass/components/_misc.scss */
-#main-menu a {
-  background-color: #ebebeb;
-}
-
-/* line 271, ../sass/components/_misc.scss */
-.numbers {
-  width: 55px;
-  text-align: center;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 300;
-  color: #000;
-}
-
-/* line 280, ../sass/components/_misc.scss */
-.title {
+/* line 261, ../sass/components/_misc.scss */
+.header__inside .title {
   border: none;
   padding: 0px;
   width: 55px;
@@ -1443,44 +1423,94 @@ iframe {
   text-transform: uppercase;
 }
 
-/* line 292, ../sass/components/_misc.scss */
-#days, #day {
-  width: 40px;
-}
-
-/* line 296, ../sass/components/_misc.scss */
-#seconds, #sec {
-  width: 65px;
-}
-
-/* line 300, ../sass/components/_misc.scss */
+/* line 272, ../sass/components/_misc.scss */
 #timer {
   position: relative;
   top: .5em;
   padding: 0 2em;
   float: left;
 }
-/* line 305, ../sass/components/_misc.scss */
+/* line 277, ../sass/components/_misc.scss */
 #timer li {
   list-style: none;
   display: inline-block;
 }
-/* line 309, ../sass/components/_misc.scss */
+/* line 281, ../sass/components/_misc.scss */
 #timer ul {
   margin: 0;
   padding: 0;
   margin: 0 0 -5px;
 }
 
+/* line 287, ../sass/components/_misc.scss */
+.numbers {
+  width: 55px;
+  text-align: center;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  color: #000;
+}
+
+/* line 296, ../sass/components/_misc.scss */
+#days, #day {
+  width: 40px;
+}
+
+/* line 300, ../sass/components/_misc.scss */
+#seconds, #sec {
+  width: 65px;
+}
+
+/* line 304, ../sass/components/_misc.scss */
+#navigation {
+  background-color: #ebebeb;
+}
+/* line 306, ../sass/components/_misc.scss */
+#navigation a {
+  background-color: #ebebeb;
+}
+
+/**
+ * Desktop Navigation
+ */
+/* line 315, ../sass/components/_misc.scss */
+#main-menu {
+  display: table;
+  margin: 0 auto;
+}
+/* line 318, ../sass/components/_misc.scss */
+#main-menu .links li {
+  display: inline-block;
+  padding: 0;
+  margin: 0 .2em;
+}
+/* line 322, ../sass/components/_misc.scss */
+#main-menu .links li a {
+  display: block;
+  padding: .75em 2em;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: background 150ms ease-in-out;
+  -moz-transition: background 150ms ease-in-out;
+  -ms-transition: background 150ms ease-in-out;
+  -o-transition: background 150ms ease-in-out;
+  transition: background 150ms ease-in-out;
+}
+/* line 329, ../sass/components/_misc.scss */
+#main-menu .links li a:hover, #main-menu .links li a:focus {
+  background: rgba(0, 0, 0, 0.15);
+  color: #000;
+}
+
 /**
  * Breadcrumb navigation.
  */
-/* line 322, ../sass/components/_misc.scss */
+/* line 342, ../sass/components/_misc.scss */
 .breadcrumb ol {
   margin: 0;
   padding: 0;
 }
-/* line 326, ../sass/components/_misc.scss */
+/* line 346, ../sass/components/_misc.scss */
 .breadcrumb li {
   display: inline;
   list-style-type: none;
@@ -1491,7 +1521,7 @@ iframe {
 /**
  * Titles.
  */
-/* line 342, ../sass/components/_misc.scss */
+/* line 362, ../sass/components/_misc.scss */
 .page__title,
 .node__title,
 .block__title,
@@ -1505,7 +1535,7 @@ iframe {
 /**
  * Messages.
  */
-/* line 349, ../sass/components/_misc.scss */
+/* line 369, ../sass/components/_misc.scss */
 .messages, .messages--status, .messages--warning, .messages--error {
   margin: 1.5em 0;
   padding: 10px 10px 10px 50px;
@@ -1515,50 +1545,50 @@ iframe {
   border: 1px solid #be7;
 }
 
-/* line 364, ../sass/components/_misc.scss */
+/* line 384, ../sass/components/_misc.scss */
 .messages--warning {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACuElEQVRIiWP4//8/Ay0xSYqntTpnT252zqeJBf0Njhsykrz/pyd6/e9vcNpGVQv6q2wlm0qc/r0+IPD/3UG+/61l9v9mdrjIUc2C7hqHUzc3S///eZwBjO9tF/vfWe1wjioWTKixVm8otPn38wQT3IKfxxn/t5Va/utpsNSg2ILWcttrNzdJgQ3+dpQRjEHs+9tE/zeXWt+gyILOamuTqlxrsOtPLub+7+emBsSq/88v5wL7oqHQ9H9nmbkF2RbUF1rev7lJEuziuU3i/90ddcB4UZsoJC62ifyvK7R4QJYFrcUGrmUZ5v9hYb9hosh/bzcDMN42VRgeF9W5hv8bi/XdSbagKtfs2c1NEvCIPbaQ/7+/pwkYn17Ki0hR24T/l2eZPCfJgsZ83dCiNOP/yCnn7iau/8G+5mD8aBsHSoqqyNL9X5erHUm0BcVpRm9ubhZHMoTh/4eDzP/DA23+RwTZ/P96hAlF7t5Wof8FyfpvibKgNk8noyDZ4D9quofg1Bjr/1kJlhjiIF+Upmn/r83RzCJoQXaC3qcbm8SwGMLwvybP/H8jMGlik7u7VeB/Zqz2J7wWVGdr1uTG62J1PQgfWST1/+hiCaxyIF8UJqv9r8hQrcVpQVqkzrcbG0WwGvB2H/P/lnx5MAaxsam5vYn3f2KY+jesFpSlqfZnxWjidP2OGWL/g/0swBjExu4Lhv958Ur/i5KU+lEsCA1lYI4JUv95bZ0gTo2Pt3P+z0myBmMQG5e6mxu4/kf4Kf8EmQm3oCRNebKrvSawIGPBqRG9sMOp5hjjfwdrlf/58bKT4RaUpWvtcLZV/39iscD/H0AFP46jYwYiMeP/44u4/9tbKQODSXUH3II9G7v18hI0n8YGKv+IDVT6joxj/BVx4mgcOCde/SnITPRUJAHEGlTCEkQV19TAAN8FC67hZdFXAAAAAElFTkSuQmCC');
   border-color: #ed5;
 }
 
-/* line 373, ../sass/components/_misc.scss */
+/* line 393, ../sass/components/_misc.scss */
 .messages--error {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACpElEQVR42rWWTUgbQRiGQ0Tx4MWDeFM8eBA9iKAoggiCoCiiIiL4L3oQV1CJB0UEf6iRYFpK7UniTw9VSqL2kvQsVDBpSZrtRo35czVNW3oprRf17exSl4yzu1ikAy9h59vvedhkMrMGAGoxknAk2w8MJ/WosXThiZkZt9jdLeglPjn5ATc3mhJNuNjbK0QbG3ExMICL/n6IfX0gcxB7ekDAELu6IHZ2IlJbi1hLS1BLogmPtbUhMTv7oMSamzUlqnByMxLT0/8STQkDj9TV4ZLj5OysrODl8jIu5Gs68dFR7JG6dWkJ0fFx+TpSX89IDMnwcHU1yKec12Yz3rlc4HkeLwjkXJpPip3U3+7vIx6P4ymph4eG5PlwTQ0lMdytlmBxMWKtrXLeT0zA5XTibvj9fjxfXETkb/3N/Dz2dneVuiTZtliU/rPSUsQ5ziuxZYG03IIlJdKKUPJjdRUAKMmzuTnskB/VYbdTtd9HR4g2NCi9Z2VliDY1BSnBaUEBzsrLqXyzWCiQ9HU5HA4afniIUFWV0hOqqMBpURErOM7NxWlhIZOvCwvA7S3Uxq+DA5AnZ3pO8vJYQSArC8c5Oeqx2Rj4udeLQH6+6v2B7GxW8DkjA0JmJpONwUHY7XZGIAgCzCYTeJUewmIFfqMRfEoKlQ2yJbza2oLWcLvdeDI2hk/3+iQWKzAYkJzNjg5srq9TwJ9OJ76YTNScx+ORJT66X1/grKyEbW2NgfPp6XKd/JMZySrHaQsSU1Oe+0/w3WpVgyu5HBlR6lc+H8gioevDwz6JrWwV5+3txyoSFk5DcOX1MnCyJ4Vwfb1zt1UY9SR8aioDpuppaVpwZbPTl+hHF04dOKzk8XBF8DgJC3/woU/W/EciOtELOWi8DDwp//215Q+p7kiKh2lQSAAAAABJRU5ErkJggg==');
   border-color: #ed541d;
 }
 
-/* line 383, ../sass/components/_misc.scss */
+/* line 403, ../sass/components/_misc.scss */
 .messages__list {
   margin: 0;
 }
 
-/* line 386, ../sass/components/_misc.scss */
+/* line 406, ../sass/components/_misc.scss */
 .messages__item {
   list-style-image: none;
 }
 
 /* Core/module installation error messages. */
-/* line 391, ../sass/components/_misc.scss */
+/* line 411, ../sass/components/_misc.scss */
 .messages--error p.error {
   color: #333;
 }
 
 /* System status report. */
-/* line 397, ../sass/components/_misc.scss */
+/* line 417, ../sass/components/_misc.scss */
 .ok,
 .messages--status {
   background-color: #f8fff0;
   color: #234600;
 }
 
-/* line 402, ../sass/components/_misc.scss */
+/* line 422, ../sass/components/_misc.scss */
 .warning,
 .messages--warning {
   background-color: #fffce5;
   color: #840;
 }
 
-/* line 407, ../sass/components/_misc.scss */
+/* line 427, ../sass/components/_misc.scss */
 .error,
 .messages--error {
   background-color: #fef5f1;
@@ -1569,7 +1599,7 @@ iframe {
  * Tabs.
  */
 /* Basic positioning styles shared by primary and secondary tabs. */
-/* line 417, ../sass/components/_misc.scss */
+/* line 437, ../sass/components/_misc.scss */
 .tabs-primary, .tabs-secondary {
   overflow: hidden;
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, #bbbbbb), color-stop(100%, transparent));
@@ -1585,14 +1615,14 @@ iframe {
   white-space: nowrap;
 }
 
-/* line 427, ../sass/components/_misc.scss */
+/* line 447, ../sass/components/_misc.scss */
 .tabs-primary__tab, .tabs-primary__tab.is-active, .tabs-secondary__tab,
 .tabs-secondary__tab.is-active {
   float: left;
   margin: 0 3px;
 }
 
-/* line 431, ../sass/components/_misc.scss */
+/* line 451, ../sass/components/_misc.scss */
 a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
   border: 1px solid #e9e9e9;
   border-right: 0;
@@ -1603,7 +1633,7 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__
 }
 
 /* Primary tabs. */
-/* line 444, ../sass/components/_misc.scss */
+/* line 464, ../sass/components/_misc.scss */
 .tabs-primary__tab, .tabs-primary__tab.is-active {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
@@ -1618,12 +1648,12 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__
   border-bottom: 0 \0/ie;
 }
 
-/* line 453, ../sass/components/_misc.scss */
+/* line 473, ../sass/components/_misc.scss */
 .is-active.tabs-primary__tab {
   border-bottom-color: white;
 }
 
-/* line 459, ../sass/components/_misc.scss */
+/* line 479, ../sass/components/_misc.scss */
 a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
@@ -1642,13 +1672,13 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active {
   text-align: center;
 }
 
-/* line 469, ../sass/components/_misc.scss */
+/* line 489, ../sass/components/_misc.scss */
 a.tabs-primary__tab-link:hover, a.tabs-primary__tab-link:focus {
   background-color: #e9e9e9;
   border-color: #f2f2f2;
 }
 
-/* line 473, ../sass/components/_misc.scss */
+/* line 493, ../sass/components/_misc.scss */
 a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
   background-color: transparent;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE9E9E9', endColorstr='#00E9E9E9');
@@ -1661,20 +1691,20 @@ a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
 }
 
 /* Secondary tabs. */
-/* line 497, ../sass/components/_misc.scss */
+/* line 517, ../sass/components/_misc.scss */
 .tabs-secondary {
   font-size: .9em;
   /* Collapse bottom margin of ul.primary. */
   margin-top: -1.5em;
 }
 
-/* line 504, ../sass/components/_misc.scss */
+/* line 524, ../sass/components/_misc.scss */
 .tabs-secondary__tab,
 .tabs-secondary__tab.is-active {
   margin: 0.75em 3px;
 }
 
-/* line 510, ../sass/components/_misc.scss */
+/* line 530, ../sass/components/_misc.scss */
 a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
   -webkit-border-radius: 0.75em;
   -moz-border-radius: 0.75em;
@@ -1691,14 +1721,14 @@ a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
   padding: 0 .5em;
 }
 
-/* line 519, ../sass/components/_misc.scss */
+/* line 539, ../sass/components/_misc.scss */
 a.tabs-secondary__tab-link:hover, a.tabs-secondary__tab-link:focus {
   background-color: #dedede;
   border-color: #999;
   color: #333;
 }
 
-/* line 524, ../sass/components/_misc.scss */
+/* line 544, ../sass/components/_misc.scss */
 a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
   text-shadow: 1px 1px 0 #333333;
   background-color: #666;
@@ -1710,12 +1740,12 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
  * Inline styles.
  */
 /* List of links generated by theme_links(). */
-/* line 552, ../sass/components/_misc.scss */
+/* line 572, ../sass/components/_misc.scss */
 .inline {
   display: inline;
   padding: 0;
 }
-/* line 556, ../sass/components/_misc.scss */
+/* line 576, ../sass/components/_misc.scss */
 .inline li {
   display: inline;
   list-style-type: none;
@@ -1723,7 +1753,7 @@ a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
 }
 
 /* The inline field label used by the Fences module. */
-/* line 564, ../sass/components/_misc.scss */
+/* line 584, ../sass/components/_misc.scss */
 span.field-label {
   padding: 0 1em 0 0;
 }
@@ -1731,17 +1761,17 @@ span.field-label {
 /**
  * "More" links.
  */
-/* line 571, ../sass/components/_misc.scss */
+/* line 591, ../sass/components/_misc.scss */
 .more-link {
   text-align: right;
 }
 
-/* line 574, ../sass/components/_misc.scss */
+/* line 594, ../sass/components/_misc.scss */
 .more-help-link {
   text-align: right;
 }
 
-/* line 577, ../sass/components/_misc.scss */
+/* line 597, ../sass/components/_misc.scss */
 .more-help-link a {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA7UlEQVR42qWTPQqDQBCFcwSPkCNITpAj5AjeIm1uYpkyR7Cy2Mot7OwsBAsRwUKwmOwLGRle3EIy8PyBfZ/z3J2TiPylz8VWWZZpUB40BonRKyizaxkA88MYYiqCEgv4MTvnZJom0VqWRbz3FlJZgLYtqmEY1Lg9r+sKsIXcLSC3AC019H0vqLquLeC5AfiHYSGkcdAJimKIBQiJ4+CO92OAtm0FNc8zOjkMwE5Q63FAtbeg6zpAYvG8BWR7i5qmQYwY4MIHqYhE2DOPQWcGJBQF2XU72ZzyUeZ5GCNt5/hybJgYdAXsq5sOEE/jG6dC5IOqCXTmAAAAAElFTkSuQmCC');
   background-position: 0 50%;
@@ -1753,14 +1783,14 @@ span.field-label {
  * Pager.
  */
 /* A list of page numbers when more than 1 page of content is available. */
-/* line 592, ../sass/components/_misc.scss */
+/* line 612, ../sass/components/_misc.scss */
 .pager {
   clear: both;
   padding: 0;
   text-align: center;
 }
 
-/* line 597, ../sass/components/_misc.scss */
+/* line 617, ../sass/components/_misc.scss */
 .pager-item,
 .pager-first,
 .pager-previous,
@@ -1773,7 +1803,7 @@ span.field-label {
   background-image: none;
 }
 
-/* line 609, ../sass/components/_misc.scss */
+/* line 629, ../sass/components/_misc.scss */
 .pager-item,
 .pager-first,
 .pager-previous,
@@ -1784,7 +1814,7 @@ span.field-label {
 }
 
 /* The current page's list item. */
-/* line 614, ../sass/components/_misc.scss */
+/* line 634, ../sass/components/_misc.scss */
 .pager-current {
   font-weight: bold;
 }
@@ -1793,7 +1823,7 @@ span.field-label {
  * Blocks.
  */
 /* Block wrapper. */
-/* line 624, ../sass/components/_misc.scss */
+/* line 644, ../sass/components/_misc.scss */
 .block {
   margin-bottom: 1.5em;
 }
@@ -1801,26 +1831,26 @@ span.field-label {
 /**
  * Menus.
  */
-/* line 631, ../sass/components/_misc.scss */
+/* line 651, ../sass/components/_misc.scss */
 .menu__item.is-leaf {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHBAMAAAA2fErgAAAAD1BMVEX///+/v7+Li4sAAADAwMBFvsw8AAAAAXRSTlMAQObYZgAAAB1JREFUCFtjYAADYwMGBmYVZSDhKAwkFJWhYiAAAB2+Aa/9ugeaAAAAAElFTkSuQmCC');
   list-style-type: square;
 }
 
-/* line 638, ../sass/components/_misc.scss */
+/* line 658, ../sass/components/_misc.scss */
 .menu__item.is-expanded {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   list-style-type: circle;
 }
 
-/* line 645, ../sass/components/_misc.scss */
+/* line 665, ../sass/components/_misc.scss */
 .menu__item.is-collapsed {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
   list-style-type: disc;
 }
 
 /* The active item in a Drupal menu. */
-/* line 654, ../sass/components/_misc.scss */
+/* line 674, ../sass/components/_misc.scss */
 .menu a.active {
   color: #000;
 }
@@ -1829,7 +1859,7 @@ span.field-label {
  * Marker.
  */
 /* The "new" or "updated" marker. */
-/* line 664, ../sass/components/_misc.scss */
+/* line 684, ../sass/components/_misc.scss */
 .new,
 .update {
   color: #c00;
@@ -1841,7 +1871,7 @@ span.field-label {
  * Unpublished note.
  */
 /* The word "Unpublished" displayed underneath the content. */
-/* line 675, ../sass/components/_misc.scss */
+/* line 695, ../sass/components/_misc.scss */
 .unpublished {
   height: 0;
   overflow: visible;
@@ -1862,31 +1892,31 @@ span.field-label {
  * Comments.
  */
 /* Wrapper for the list of comments and its title. */
-/* line 703, ../sass/components/_misc.scss */
+/* line 723, ../sass/components/_misc.scss */
 .comments {
   margin: 1.5em 0;
 }
 
 /* Preview of the comment before submitting new or updated comment. */
-/* line 708, ../sass/components/_misc.scss */
+/* line 728, ../sass/components/_misc.scss */
 .comment-preview {
   /* Drupal core will use a #ffffea background. See #1110842. */
   background-color: #ffffea;
 }
 
 /* Wrapper for a single comment. */
-/* line 714, ../sass/components/_misc.scss */
+/* line 734, ../sass/components/_misc.scss */
 .comment {
   /* Comment's permalink wrapper. */
 }
-/* line 717, ../sass/components/_misc.scss */
+/* line 737, ../sass/components/_misc.scss */
 .comment .permalink {
   text-transform: uppercase;
   font-size: 75%;
 }
 
 /* Nested comments are indented. */
-/* line 724, ../sass/components/_misc.scss */
+/* line 744, ../sass/components/_misc.scss */
 .indented {
   /* Drupal core uses a 25px left margin. */
   margin-left: 30px;
@@ -1896,7 +1926,7 @@ span.field-label {
  * Forms.
  */
 /* Wrapper for a form element (or group of form elements) and its label. */
-/* line 734, ../sass/components/_misc.scss */
+/* line 754, ../sass/components/_misc.scss */
 .form-item {
   margin: 1.5em 0;
   /* Pack groups of checkboxes and radio buttons closer together. */
@@ -1904,47 +1934,47 @@ span.field-label {
   /* Highlight the form elements that caused a form submission error. */
   /* The descriptive help text (separate from the label). */
 }
-/* line 739, ../sass/components/_misc.scss */
+/* line 759, ../sass/components/_misc.scss */
 .form-checkboxes .form-item, .form-radios .form-item {
   /* Drupal core uses "0.4em 0". */
   margin: 0;
 }
-/* line 746, ../sass/components/_misc.scss */
+/* line 766, ../sass/components/_misc.scss */
 tr.odd .form-item, tr.even .form-item {
   margin: 0;
 }
-/* line 753, ../sass/components/_misc.scss */
+/* line 773, ../sass/components/_misc.scss */
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
   border: 1px solid #c00;
 }
-/* line 758, ../sass/components/_misc.scss */
+/* line 778, ../sass/components/_misc.scss */
 .form-item .description {
   font-size: 0.85em;
 }
 
-/* line 765, ../sass/components/_misc.scss */
+/* line 785, ../sass/components/_misc.scss */
 .form-type-radio .description,
 .form-type-checkbox .description {
   margin-left: 2.4em;
 }
 
 /* The part of the label that indicates a required field. */
-/* line 771, ../sass/components/_misc.scss */
+/* line 791, ../sass/components/_misc.scss */
 .form-required {
   color: #c00;
 }
 
 /* Labels for radios and checkboxes. */
-/* line 776, ../sass/components/_misc.scss */
+/* line 796, ../sass/components/_misc.scss */
 label.option {
   display: inline;
   font-weight: normal;
 }
 
 /* Buttons used by contrib modules like Media. */
-/* line 782, ../sass/components/_misc.scss */
+/* line 802, ../sass/components/_misc.scss */
 a.button {
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -1952,14 +1982,14 @@ a.button {
 }
 
 /* Password confirmation. */
-/* line 788, ../sass/components/_misc.scss */
+/* line 808, ../sass/components/_misc.scss */
 .password-parent,
 .confirm-parent {
   margin: 0;
 }
 
 /* Drupal's default login form block. */
-/* line 793, ../sass/components/_misc.scss */
+/* line 813, ../sass/components/_misc.scss */
 #user-login-form {
   text-align: left;
 }
@@ -1971,27 +2001,27 @@ a.button {
  * styling of list items.
  */
 /* OpenID creates a new ul above the login form's links. */
-/* line 805, ../sass/components/_misc.scss */
+/* line 825, ../sass/components/_misc.scss */
 .openid-links {
   /* Position OpenID's ul next to the rest of the links. */
   margin-bottom: 0;
 }
 
 /* The "Log in using OpenID" and "Cancel OpenID login" links. */
-/* line 812, ../sass/components/_misc.scss */
+/* line 832, ../sass/components/_misc.scss */
 .openid-link,
 .user-link {
   margin-top: 1.5em;
 }
 
-/* line 816, ../sass/components/_misc.scss */
+/* line 836, ../sass/components/_misc.scss */
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* Un-do some of the padding on the ul list. */
   margin-left: -20px;
 }
 
-/* line 820, ../sass/components/_misc.scss */
+/* line 840, ../sass/components/_misc.scss */
 #user-login ul {
   margin: 1.5em 0;
 }
@@ -1999,27 +2029,27 @@ html.js #user-login-form li.openid-link,
 /**
  * Drupal admin tables.
  */
-/* line 828, ../sass/components/_misc.scss */
+/* line 848, ../sass/components/_misc.scss */
 form th {
   text-align: left;
   padding-right: 1em;
   border-bottom: 3px solid #ccc;
 }
-/* line 833, ../sass/components/_misc.scss */
+/* line 853, ../sass/components/_misc.scss */
 form tbody {
   border-top: 1px solid #ccc;
 }
-/* line 836, ../sass/components/_misc.scss */
+/* line 856, ../sass/components/_misc.scss */
 form table ul {
   margin: 0;
 }
 
-/* line 841, ../sass/components/_misc.scss */
+/* line 861, ../sass/components/_misc.scss */
 table td {
   padding: .5em;
 }
 
-/* line 845, ../sass/components/_misc.scss */
+/* line 865, ../sass/components/_misc.scss */
 thead {
   border-bottom: 3px solid #cccccc;
   font-size: 1.25em;
@@ -2027,33 +2057,33 @@ thead {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 851, ../sass/components/_misc.scss */
+/* line 871, ../sass/components/_misc.scss */
 tr.even,
 tr.odd {
   border-bottom: 1px solid #dadada;
   padding: 0.1em 0.6em;
 }
 
-/* line 856, ../sass/components/_misc.scss */
+/* line 876, ../sass/components/_misc.scss */
 tr:hover {
   background-color: #ebebeb;
 }
 
 /* Markup generated by theme_tablesort_indicator(). */
-/* line 871, ../sass/components/_misc.scss */
+/* line 891, ../sass/components/_misc.scss */
 td.active {
   background-color: #ddd;
 }
 
 /* Center checkboxes inside table cell. */
-/* line 877, ../sass/components/_misc.scss */
+/* line 897, ../sass/components/_misc.scss */
 td.checkbox,
 th.checkbox {
   text-align: center;
 }
 
 /* Drupal core wrongly puts this in system.menus.css. Since we override that, add it back. */
-/* line 882, ../sass/components/_misc.scss */
+/* line 902, ../sass/components/_misc.scss */
 td.menu-disabled {
   background: #ccc;
 }
@@ -2064,7 +2094,7 @@ td.menu-disabled {
  * @see autocomplete.js
  */
 /* Suggestion list. */
-/* line 893, ../sass/components/_misc.scss */
+/* line 913, ../sass/components/_misc.scss */
 #autocomplete .selected {
   background: #0072b9;
   color: #fff;
@@ -2075,19 +2105,19 @@ td.menu-disabled {
  *
  * @see collapse.js
  */
-/* line 904, ../sass/components/_misc.scss */
+/* line 924, ../sass/components/_misc.scss */
 html.js .collapsible .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   background-position: 5px 65%;
   background-repeat: no-repeat;
   padding-left: 15px;
 }
-/* line 913, ../sass/components/_misc.scss */
+/* line 933, ../sass/components/_misc.scss */
 html.js .collapsed .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
   background-position: 5px 50%;
 }
-/* line 920, ../sass/components/_misc.scss */
+/* line 940, ../sass/components/_misc.scss */
 .fieldset-legend .summary {
   color: #999;
   font-size: 0.9em;
@@ -2099,17 +2129,17 @@ html.js .collapsed .fieldset-legend {
  *
  * @see tabledrag.js
  */
-/* line 932, ../sass/components/_misc.scss */
+/* line 952, ../sass/components/_misc.scss */
 tr.drag {
   background-color: #fffff0;
 }
 
-/* line 935, ../sass/components/_misc.scss */
+/* line 955, ../sass/components/_misc.scss */
 tr.drag-previous {
   background-color: #ffd;
 }
 
-/* line 938, ../sass/components/_misc.scss */
+/* line 958, ../sass/components/_misc.scss */
 .tabledrag-toggle-weight {
   font-size: 0.9em;
 }
@@ -2119,7 +2149,7 @@ tr.drag-previous {
  *
  * @see tableselect.js
  */
-/* line 947, ../sass/components/_misc.scss */
+/* line 967, ../sass/components/_misc.scss */
 tr.selected td {
   background: #ffc;
 }
@@ -2129,11 +2159,11 @@ tr.selected td {
  *
  * @see progress.js
  */
-/* line 956, ../sass/components/_misc.scss */
+/* line 976, ../sass/components/_misc.scss */
 .progress {
   font-weight: bold;
 }
-/* line 959, ../sass/components/_misc.scss */
+/* line 979, ../sass/components/_misc.scss */
 .progress .bar {
   background: #ccc;
   border-color: #666;
@@ -2144,13 +2174,13 @@ tr.selected td {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 965, ../sass/components/_misc.scss */
+/* line 985, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
   background-image: url('../images/progress.gif?1430236137');
 }
 
-/* line 973, ../sass/components/_misc.scss */
+/* line 993, ../sass/components/_misc.scss */
 .menu-toggle,
 .menu-toggle:link,
 .menu-toggle:visited {
@@ -2160,7 +2190,7 @@ tr.selected td {
   color: #666666;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-/* line 981, ../sass/components/_misc.scss */
+/* line 1001, ../sass/components/_misc.scss */
 .menu-toggle:hover, .menu-toggle:focus, .menu-toggle:active,
 .menu-toggle:link:hover,
 .menu-toggle:link:focus,
@@ -2172,7 +2202,7 @@ tr.selected td {
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-/* line 988, ../sass/components/_misc.scss */
+/* line 1008, ../sass/components/_misc.scss */
 .btn-close,
 .btn-close:link,
 .btn:visited {
@@ -2181,7 +2211,7 @@ tr.selected td {
   margin: .5em 1em;
   display: inline-block;
 }
-/* line 995, ../sass/components/_misc.scss */
+/* line 1015, ../sass/components/_misc.scss */
 .btn-close:hover, .btn-close:focus, .btn-close:active,
 .btn-close:link:hover,
 .btn-close:link:focus,
@@ -2194,7 +2224,7 @@ tr.selected td {
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-/* line 1003, ../sass/components/_misc.scss */
+/* line 1023, ../sass/components/_misc.scss */
 .menu-toggle,
 .btn-close {
   font-size: 24px;
@@ -2202,7 +2232,7 @@ tr.selected td {
   padding: .2em 0;
   border-radius: 4px;
 }
-/* line 1007, ../sass/components/_misc.scss */
+/* line 1027, ../sass/components/_misc.scss */
 .menu-toggle span,
 .btn-close span {
   position: absolute !important;
@@ -2212,7 +2242,7 @@ tr.selected td {
   clip: rect(1px, 1px, 1px, 1px);
 }
 @media only screen and (min-width: 60em) {
-  /* line 1003, ../sass/components/_misc.scss */
+  /* line 1023, ../sass/components/_misc.scss */
   .menu-toggle,
   .btn-close {
     display: none;
@@ -2223,14 +2253,14 @@ tr.selected td {
  * Sliding Navigation
  */
 @media only screen and (max-width: 60em) {
-  /* line 1021, ../sass/components/_misc.scss */
+  /* line 1041, ../sass/components/_misc.scss */
   #page {
     position: relative;
     overflow: hidden;
     width: 100%;
     z-index: 100;
   }
-  /* line 1026, ../sass/components/_misc.scss */
+  /* line 1046, ../sass/components/_misc.scss */
   #page .sliding-canvas {
     width: 100%;
     height: 100%;
@@ -2246,7 +2276,7 @@ tr.selected td {
     -o-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
   }
-  /* line 1034, ../sass/components/_misc.scss */
+  /* line 1054, ../sass/components/_misc.scss */
   #page[data-state='slide-open'] .sliding-canvas {
     -webkit-transform: translateX(-100%);
     -moz-transform: translateX(-100%);
@@ -2254,7 +2284,7 @@ tr.selected td {
     -o-transform: translateX(-100%);
     transform: translateX(-100%);
   }
-  /* line 1038, ../sass/components/_misc.scss */
+  /* line 1058, ../sass/components/_misc.scss */
   #page[data-state='slide-open'] {
     overflow: visible;
   }
@@ -2262,7 +2292,7 @@ tr.selected td {
   /**
    * Navigation
    */
-  /* line 1048, ../sass/components/_misc.scss */
+  /* line 1068, ../sass/components/_misc.scss */
   .slide-menu {
     position: absolute;
     width: 100%;
@@ -2279,30 +2309,30 @@ tr.selected td {
     min-height: 800px;
   }
 
-  /* line 1063, ../sass/components/_misc.scss */
+  /* line 1083, ../sass/components/_misc.scss */
   #mobile_navigation nav ul li {
     display: block;
     padding: 0;
   }
-  /* line 1066, ../sass/components/_misc.scss */
+  /* line 1086, ../sass/components/_misc.scss */
   #mobile_navigation nav ul li a {
     padding: .75em 1.5em;
     display: block;
     border-top: 1px solid #666666;
   }
-  /* line 1072, ../sass/components/_misc.scss */
+  /* line 1092, ../sass/components/_misc.scss */
   #mobile_navigation #mobile-main-menu li:last-child a {
     border-bottom: 1px solid #666666;
   }
 }
 @media only screen and (min-width: 60em) {
-  /* line 1082, ../sass/components/_misc.scss */
+  /* line 1102, ../sass/components/_misc.scss */
   .slide-menu {
     position: static;
     right: auto;
   }
 
-  /* line 1086, ../sass/components/_misc.scss */
+  /* line 1106, ../sass/components/_misc.scss */
   #mobile_navigation {
     display: none;
   }

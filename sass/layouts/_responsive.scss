@@ -30,7 +30,7 @@ $zen-auto-include-item-base: false;
  * For screen sizes larger than 1200px, prevent excessively long lines of text
  * by setting a max-width.
  */
-#page,
+.full-width-wrapper,
 .region-bottom {
   margin-left: auto;
   margin-right: auto;
@@ -38,7 +38,7 @@ $zen-auto-include-item-base: false;
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
-#header,
+
 #content,
 #navigation,
 .region-sidebar-first,

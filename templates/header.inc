@@ -111,12 +111,15 @@
         </div><!-- /#navigation -->
       </div><!-- /.slide-menu -->
 
-    <?php print render($page['header']); ?>
+
 
       <section class="banner">
-        <?php if ($site_slogan): ?>
-          <h2 class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></h2>
-        <?php endif; ?>
+        <div class="full-width-wrapper">
+          <?php print render($page['header']); ?>
+          <?php if ($site_slogan): ?>
+            <h2 class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></h2>
+          <?php endif; ?>
+        </div>
       </section>
     
     </header>

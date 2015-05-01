@@ -123,7 +123,7 @@
   font-weight: bold;
   letter-spacing: .5px;
   //background: red;
-  padding: 1em;
+  padding: 1.1em;
   @include opacity(.9);
   @include ease(background, 150ms, ease-in-out);
   &:before{
@@ -258,26 +258,7 @@ iframe{
   }
 }
 
-
-
-#main-menu{
-  background-color: $btn-light-grey;
-  a{
-    background-color: $btn-light-grey;
-  }
-}
-
-
-.numbers {
-  width: 55px;
-  text-align: center; 
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 300;
-  color: #000;
-}
-
-.title {
+.header__inside .title {
   border: none;    
   padding: 0px;
   width: 55px;
@@ -286,15 +267,6 @@ iframe{
   font-weight: normal;
   color: #000;
   text-transform: uppercase;
-
-}
-
-#days, #day{
-  width: 40px;
-}
-
-#seconds, #sec{
-  width: 65px;
 }
 
 #timer {
@@ -312,7 +284,55 @@ iframe{
   }
 }
 
+.numbers {
+  width: 55px;
+  text-align: center; 
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  color: #000;
+}
 
+#days, #day{
+  width: 40px;
+}
+
+#seconds, #sec{
+  width: 65px;
+}
+
+#navigation{
+  background-color: $btn-light-grey;
+  a{
+    background-color: $btn-light-grey;
+  }
+}
+
+/**
+ * Desktop Navigation
+ */
+
+#main-menu{
+  display: table;
+  margin: 0 auto;
+  .links li{
+    display: inline-block;
+    padding: 0;
+    margin: 0 .2em;
+    a{
+      display: block;
+      //background: blue;
+      padding: .75em 2em;
+      @include background(rgba(0,0,0,0));
+      @include ease(background, 150ms, ease-in-out);
+      &:hover, 
+      &:focus{
+        @include background(rgba(0,0,0,0.15));
+        color: #000;
+      }
+    }
+  }
+}
 
 
 /**
