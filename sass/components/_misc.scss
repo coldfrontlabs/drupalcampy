@@ -1134,20 +1134,42 @@ tr.selected td {
       margin: .5em 0;
     }
   }
-  @media #{$tablet-landscape}{
+  @media #{$tablet}{
     display: table;
+    margin: 0 auto;
     ul li{
       display: inline-block;
       margin: 0 1em;
     }
   }
 }
-
+#block-menu-menu-social-menu{
+  display: table;
+  margin: 2em auto 0;
+  ul li{
+    display: inline-block;
+    margin: 0 1em;
+    width: 60px;
+    height: 60px;
+  }
+} 
 #block-menu-menu-social-menu a{
   visibility: hidden;
+  display: inline-block;
+
   &:before{
     visibility: visible;
     @extend .icon;
+    background: $body-text;
+    color: #fff;
+    @include rem-fallback(font-size, 2);
+    padding: .4em;
+    @include border-radius(50%);
+    @include ease(background, 150ms, ease-in-out);
+
+  }
+  &:hover:before, &:focus:before{
+    background: $btn-light-blue;
   }
 }
 
@@ -1160,6 +1182,22 @@ tr.selected td {
 }
 
 .drupal{
-  @extend .i-drupal;
+  @extend .i-drupal; 
 }
 
+#block-blockify-blockify-site-name{
+  padding-top: 20em;
+}
+
+#page{
+  @include vector-bg-with-fallback(footer-bg);
+  background-position: center bottom 20em;
+  background-repeat: no-repeat;
+  padding-bottom: 5em;
+  @include box-shadow($btn-light-grey 0 -20.5em 0 0 inset); 
+  @media #{$tablet} { 
+    background-position: center bottom 10em;
+    @include box-shadow($btn-light-grey 0 -10.5em 0 0 inset);
+    padding-bottom: 5em;
+  }
+}

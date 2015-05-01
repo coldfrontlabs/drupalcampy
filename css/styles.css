@@ -2367,13 +2367,14 @@ tr.selected td {
   list-style-type: none;
   margin: .5em 0;
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 37.5em) {
   /* line 1126, ../sass/components/_misc.scss */
   #block-menu-menu-footer-menu,
   #block-menu-menu-social-menu {
     display: table;
+    margin: 0 auto;
   }
-  /* line 1139, ../sass/components/_misc.scss */
+  /* line 1140, ../sass/components/_misc.scss */
   #block-menu-menu-footer-menu ul li,
   #block-menu-menu-social-menu ul li {
     display: inline-block;
@@ -2382,12 +2383,72 @@ tr.selected td {
 }
 
 /* line 1146, ../sass/components/_misc.scss */
+#block-menu-menu-social-menu {
+  display: table;
+  margin: 2em auto 0;
+}
+/* line 1149, ../sass/components/_misc.scss */
+#block-menu-menu-social-menu ul li {
+  display: inline-block;
+  margin: 0 1em;
+  width: 60px;
+  height: 60px;
+}
+
+/* line 1156, ../sass/components/_misc.scss */
 #block-menu-menu-social-menu a {
   visibility: hidden;
+  display: inline-block;
 }
-/* line 1148, ../sass/components/_misc.scss */
+/* line 1160, ../sass/components/_misc.scss */
 #block-menu-menu-social-menu a:before {
   visibility: visible;
+  background: #444444;
+  color: #fff;
+  font-size: 32px;
+  font-size: 2rem;
+  padding: .4em;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: background 150ms ease-in-out;
+  -moz-transition: background 150ms ease-in-out;
+  -ms-transition: background 150ms ease-in-out;
+  -o-transition: background 150ms ease-in-out;
+  transition: background 150ms ease-in-out;
+}
+/* line 1171, ../sass/components/_misc.scss */
+#block-menu-menu-social-menu a:hover:before, #block-menu-menu-social-menu a:focus:before {
+  background: #0d70aa;
+}
+
+/* line 1188, ../sass/components/_misc.scss */
+#block-blockify-blockify-site-name {
+  padding-top: 20em;
+}
+
+/* line 1192, ../sass/components/_misc.scss */
+#page {
+  background-image: url("../images/footer-bg.png");
+  background-image: none, url("../images/footer-bg.svg");
+  background-position: center bottom 20em;
+  background-repeat: no-repeat;
+  padding-bottom: 5em;
+  -webkit-box-shadow: #ebebeb 0 -20.5em 0 0 inset;
+  -moz-box-shadow: #ebebeb 0 -20.5em 0 0 inset;
+  box-shadow: #ebebeb 0 -20.5em 0 0 inset;
+}
+@media only screen and (min-width: 37.5em) {
+  /* line 1192, ../sass/components/_misc.scss */
+  #page {
+    background-position: center bottom 10em;
+    -webkit-box-shadow: #ebebeb 0 -10.5em 0 0 inset;
+    -moz-box-shadow: #ebebeb 0 -10.5em 0 0 inset;
+    box-shadow: #ebebeb 0 -10.5em 0 0 inset;
+    padding-bottom: 5em;
+  }
 }
 
 /* line 1, ../sass/components/_typography.scss */

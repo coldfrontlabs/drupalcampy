@@ -114,11 +114,13 @@
 
 
       <section class="banner">
-        <div class="full-width-wrapper">
-          <?php print render($page['header']); ?>
-          <?php if ($site_slogan): ?>
-            <h2 class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></h2>
-          <?php endif; ?>
+        <div class="pattern">
+          <div class="full-width-wrapper">
+            <?php print render($page['header']); ?>
+            <?php if ($site_slogan): ?>
+              <h2 class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></h2>
+            <?php endif; ?>
+          </div>
         </div>
       </section>
     
