@@ -12,13 +12,13 @@
     width: 100%;
     padding: 4em 0 ;
     @media #{$tablet} {
-      padding: 3em 0 ;
+      padding: 3em 0 4em;
     }
     @media #{$desktop} {
-      padding: 6em 0 ;
+      padding: 6em 0 7em;
     }
     @media #{$desktop-xlarge} {
-      padding: 8em 0 ;
+      padding: 8em 0 9em;
     } 
   }
 }
@@ -40,12 +40,12 @@
     .pattern{
       height: 100%;
       width: 100%;
-        padding: 5em 0 ;
+        padding: 5em 0 6em;
         @media #{$desktop} {
-          padding: 10em 0 ;
+          padding: 10em 0 11em;
         }
         @media #{$desktop-xlarge} {
-          padding: 12em 0 ;
+          padding: 12em 0 13em;
         } 
     }
   }
@@ -73,8 +73,33 @@
       @include rem-fallback(font-size, 1.2);
       font-weight: normal;
     }
-//    @include rem-fallback(font-size, 12);
   }
+
+  @media #{$tablet} {
+    p{
+      @include rem-fallback(font-size, 1.2);
+    }
+    h2{
+      @include rem-fallback(font-size, 2.5);
+      span{
+        @include rem-fallback(font-size, 1.5);
+      }
+    }
+  }
+  @media #{$tablet-landscape} {
+    p{
+      @include rem-fallback(font-size, 1.3125);
+    }
+    h2{
+      @include rem-fallback(font-size, 3);
+      line-height: 1;
+      margin: .5em 0 .75em;
+      span{
+        @include rem-fallback(font-size, 1.5);
+      }
+    }
+  }
+
 }
 
 a.window-btn{
@@ -133,6 +158,7 @@ a.window-btn{
   color: #222;
   line-height: 1.4;
   font-weight: 300;
+  height: 140px;
 }
 
 .caption-style {
@@ -250,10 +276,46 @@ a.window-btn{
   }
 }
 
+.banner__secondary{
+  padding: 5em 0;
+  text-align: center;
+  color: #fff;
+  h2{
+    @include rem-fallback(font-size, 3);
+    margin: 0;
+  }
+  h3{
+    @include rem-fallback(font-size, 1.5);
+    margin: 0;
+    font-weight: normal;
+    color: #fff;
+    &:after{
+      border: 0;
+      width: 0;
+    }
+  }
+}
 
+.submit-a-session{
+  margin-top: -6px;
+  background: transparent url(../images/banner-tulips.jpg) no-repeat center center;
+  background-attachment: fixed;
+  padding: 0;
+  .pattern-reversed{
+    padding: 5em 0 ;
+  }
+}
 
+.volunteer{
+  background: #222;
+}
 
-
+.map{
+  p{
+    margin: 0;
+  }
+  padding: 0;
+}
 
 
 
