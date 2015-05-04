@@ -127,7 +127,9 @@ a.window-btn{
 /**
  * Home Page Features
  */
-
+.contextual-links-region .dark-box{
+  margin: 0;
+}
 .dark-box {
   width: 100%;
   height: 168px;
@@ -137,7 +139,7 @@ a.window-btn{
   top: 0;
   left: 0;
   padding: 0;
-  margin: 0;
+  margin: 2em 0;
 }
 
 .content {
