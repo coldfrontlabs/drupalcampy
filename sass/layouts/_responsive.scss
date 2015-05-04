@@ -43,6 +43,8 @@ $zen-auto-include-item-base: false;
 #navigation,
 .region-sidebar-first,
 .region-sidebar-second,
+.panel-pane,
+.not-front .page__title,
 #footer {
   // See the note about $zen-auto-include-item-base above.
   @include zen-grid-item-base();
@@ -51,7 +53,8 @@ $zen-auto-include-item-base: false;
 /* Containers for grid items and flow items. */
 #header,
 #main,
-#footer {
+#footer, 
+.panel-pane {
   @include zen-grid-container();
 }
 
@@ -221,5 +224,39 @@ $zen-auto-include-item-base: false;
 }
 
 .not-front #main{
-  padding-top: 6em;
+  padding-top: 3em;
+
+  @media #{$tablet-landscape} {
+    padding-top: 6em;
+  }
 }
+
+.page-about{
+  $zen-column-count: 4;
+  .panel-pane img{
+    max-width: 250px;
+    margin: 0 auto;
+    display: table;
+    //@include zen-grid-item(4, 1);
+  }
+  .about-content{
+    @include zen-grid-item(4, 1);
+    @include zen-clear();
+    @include box-sizing(border-box);
+    padding: 0 20px;
+  }
+  @media #{$tablet-landscape} {
+
+    .panel-pane img{
+      @include zen-grid-item(1, 1);
+    }
+    .about-content{
+      @include zen-grid-item(3, 2);
+      @include zen-clear(none);
+    }
+  }
+  .panel-pane{
+    padding: 2em 0;
+  }
+}
+
