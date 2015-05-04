@@ -1,5 +1,5 @@
 
-.banner{
+.not-front .banner{
   background: #222 url('../images/main-banner.jpg');
   background-position: center -50px;
   background-repeat: no-repeat;
@@ -10,15 +10,16 @@
   .pattern{
     height: 100%;
     width: 100%;
-    padding: 4em 0 ;
+    padding: 5em 0 ;
+    h2{ line-height: 1.3;}
     @media #{$tablet} {
-      padding: 3em 0 4em;
+      padding: 3em 0 2em;
     }
     @media #{$desktop} {
-      padding: 6em 0 7em;
+      padding: 6em 0 5em;
     }
     @media #{$desktop-xlarge} {
-      padding: 8em 0 9em;
+      padding: 8em 0 7em;
     } 
   }
 }

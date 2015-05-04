@@ -75,3 +75,25 @@ legend {
 .filter-wrapper {
   border: 1px solid $light-grey;
 }
+
+.contact-form{
+  .pane-title, 
+  label{
+    @include element-invisible;
+  }
+  input, textarea{
+    padding: 1em;
+    width: 100%;
+    &.email{
+      @include box-sizing(border-box);
+      height: 34px;
+    }
+    &[type="submit"]{
+      width: auto;
+      @include ease(background, 150ms, ease-in-out);
+      &:hover, &:focus{
+        background: darken($btn-dark-blue, 5%);
+      }
+    }
+  }
+}
