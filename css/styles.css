@@ -2625,7 +2625,7 @@ label.option {
 
 /* line 2, ../sass/components/_pages.scss */
 .banner {
-  background: url("../images/main-banner.jpg");
+  background: #222222 url("../images/main-banner.jpg");
   background-position: center -50px;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -2669,7 +2669,12 @@ label.option {
   background: url("../images/main-banner.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+}
+@media only screen and (min-width: 60em) {
+  /* line 31, ../sass/components/_pages.scss */
+  .front .banner {
+    background-attachment: fixed;
+  }
 }
 @media only screen and (min-width: 110em) {
   /* line 31, ../sass/components/_pages.scss */
@@ -2678,95 +2683,101 @@ label.option {
     background-size: 100%;
   }
 }
-/* line 40, ../sass/components/_pages.scss */
+/* line 42, ../sass/components/_pages.scss */
 .front .banner .pattern {
   height: 100%;
   width: 100%;
   padding: 5em 0 6em;
 }
+@media only screen and (min-width: 60em) {
+  /* line 42, ../sass/components/_pages.scss */
+  .front .banner .pattern {
+    padding: 7em 0 8em;
+  }
+}
 @media only screen and (min-width: 87.5em) {
-  /* line 40, ../sass/components/_pages.scss */
+  /* line 42, ../sass/components/_pages.scss */
   .front .banner .pattern {
     padding: 10em 0 11em;
   }
 }
 @media only screen and (min-width: 110em) {
-  /* line 40, ../sass/components/_pages.scss */
+  /* line 42, ../sass/components/_pages.scss */
   .front .banner .pattern {
     padding: 12em 0 13em;
   }
 }
 
-/* line 54, ../sass/components/_pages.scss */
+/* line 59, ../sass/components/_pages.scss */
 .pattern {
   background: transparent url("../images/pattern.png") repeat top left;
 }
 
-/* line 58, ../sass/components/_pages.scss */
+/* line 63, ../sass/components/_pages.scss */
 .pattern-reversed {
   background: transparent url("../images/pattern-reverse.png") repeat top left;
 }
 
-/* line 62, ../sass/components/_pages.scss */
+/* line 67, ../sass/components/_pages.scss */
 .banner .pattern {
   color: #fff;
   text-align: center;
 }
-/* line 65, ../sass/components/_pages.scss */
+/* line 70, ../sass/components/_pages.scss */
 .banner .pattern p {
   margin: .5em 0;
 }
-/* line 68, ../sass/components/_pages.scss */
+/* line 73, ../sass/components/_pages.scss */
 .banner .pattern h2 {
   font-size: 32px;
   font-size: 2rem;
   line-height: 1.2;
   margin: 0 0 1em;
 }
-/* line 72, ../sass/components/_pages.scss */
+/* line 77, ../sass/components/_pages.scss */
 .banner .pattern h2 span {
   font-size: 19.2px;
   font-size: 1.2rem;
   font-weight: normal;
 }
 @media only screen and (min-width: 37.5em) {
-  /* line 79, ../sass/components/_pages.scss */
+  /* line 84, ../sass/components/_pages.scss */
   .banner .pattern p {
     font-size: 19.2px;
     font-size: 1.2rem;
   }
-  /* line 82, ../sass/components/_pages.scss */
+  /* line 87, ../sass/components/_pages.scss */
   .banner .pattern h2 {
     font-size: 40px;
     font-size: 2.5rem;
   }
-  /* line 84, ../sass/components/_pages.scss */
+  /* line 89, ../sass/components/_pages.scss */
   .banner .pattern h2 span {
     font-size: 24px;
     font-size: 1.5rem;
   }
 }
 @media only screen and (min-width: 60em) {
-  /* line 90, ../sass/components/_pages.scss */
+  /* line 95, ../sass/components/_pages.scss */
   .banner .pattern p {
     font-size: 21px;
     font-size: 1.3125rem;
   }
-  /* line 93, ../sass/components/_pages.scss */
+  /* line 98, ../sass/components/_pages.scss */
   .banner .pattern h2 {
     font-size: 48px;
     font-size: 3rem;
     line-height: 1;
     margin: .5em 0 .75em;
   }
-  /* line 97, ../sass/components/_pages.scss */
+  /* line 102, ../sass/components/_pages.scss */
   .banner .pattern h2 span {
     font-size: 24px;
     font-size: 1.5rem;
   }
 }
 
-/* line 105, ../sass/components/_pages.scss */
+/* line 110, ../sass/components/_pages.scss */
 a.window-btn {
   background: transparent;
   padding: .5em 1em .6em;
@@ -2781,7 +2792,7 @@ a.window-btn {
   -o-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
-/* line 115, ../sass/components/_pages.scss */
+/* line 120, ../sass/components/_pages.scss */
 a.window-btn:hover, a.window-btn:focus {
   background: #005d93;
   border-color: #005d93;
@@ -2790,7 +2801,7 @@ a.window-btn:hover, a.window-btn:focus {
 /**
  * Home Page Features
  */
-/* line 125, ../sass/components/_pages.scss */
+/* line 130, ../sass/components/_pages.scss */
 .dark-box {
   width: 100%;
   height: 168px;
@@ -2803,13 +2814,13 @@ a.window-btn:hover, a.window-btn:focus {
   margin: 0;
 }
 
-/* line 137, ../sass/components/_pages.scss */
+/* line 142, ../sass/components/_pages.scss */
 .content {
   z-index: 5;
   margin: 0 auto;
 }
 
-/* line 142, ../sass/components/_pages.scss */
+/* line 147, ../sass/components/_pages.scss */
 .container-profile-dark {
   display: inline-block;
   margin-top: 10.5em;
@@ -2818,13 +2829,13 @@ a.window-btn:hover, a.window-btn:focus {
   transition: all 0.3s ease-in-out;
 }
 
-/* line 150, ../sass/components/_pages.scss */
+/* line 155, ../sass/components/_pages.scss */
 .container-profile-dark h2 {
   color: #222;
   margin-top: 12em;
 }
 
-/* line 155, ../sass/components/_pages.scss */
+/* line 160, ../sass/components/_pages.scss */
 .container-profile-dark p {
   text-align: center;
   padding: 0 2em 15px 2em;
@@ -2834,7 +2845,7 @@ a.window-btn:hover, a.window-btn:focus {
   height: 140px;
 }
 
-/* line 164, ../sass/components/_pages.scss */
+/* line 169, ../sass/components/_pages.scss */
 .caption-style {
   list-style-type: none;
   padding: 0px;
@@ -2842,12 +2853,12 @@ a.window-btn:hover, a.window-btn:focus {
   margin: 0 auto;
 }
 
-/* line 171, ../sass/components/_pages.scss */
+/* line 176, ../sass/components/_pages.scss */
 .caption-style li {
   display: block;
 }
 
-/* line 175, ../sass/components/_pages.scss */
+/* line 180, ../sass/components/_pages.scss */
 .container-profile-dark .inner-content {
   padding: 0px;
   position: relative;
@@ -2855,7 +2866,7 @@ a.window-btn:hover, a.window-btn:focus {
   margin-top: -8em;
 }
 
-/* line 182, ../sass/components/_pages.scss */
+/* line 187, ../sass/components/_pages.scss */
 .caption-text {
   z-index: 10;
   color: #fff;
@@ -2865,7 +2876,7 @@ a.window-btn:hover, a.window-btn:focus {
   top: 70px;
 }
 
-/* line 191, ../sass/components/_pages.scss */
+/* line 196, ../sass/components/_pages.scss */
 .container-profile-dark .caption-bg {
   opacity: 0;
   cursor: pointer;
@@ -2881,7 +2892,7 @@ a.window-btn:hover, a.window-btn:focus {
   transition: all 0.3s ease-in-out;
 }
 
-/* line 206, ../sass/components/_pages.scss */
+/* line 211, ../sass/components/_pages.scss */
 .container-profile-dark img {
   padding: 0px;
   position: absolute;
@@ -2896,7 +2907,7 @@ a.window-btn:hover, a.window-btn:focus {
   margin: 0 0 1em;
 }
 
-/* line 220, ../sass/components/_pages.scss */
+/* line 225, ../sass/components/_pages.scss */
 .container-profile-dark h4 {
   text-transform: uppercase;
   font-size: 24px;
@@ -2906,26 +2917,26 @@ a.window-btn:hover, a.window-btn:focus {
 }
 
 /* Image hover */
-/* line 230, ../sass/components/_pages.scss */
+/* line 235, ../sass/components/_pages.scss */
 .container-profile-dark:hover .caption-bg,
 .container-profile-dark:hover h4 {
   opacity: 1;
 }
 
-/* line 234, ../sass/components/_pages.scss */
+/* line 239, ../sass/components/_pages.scss */
 .container-profile-dark:hover {
   background-color: #EBEBEB;
 }
 
 /* Media queries*/
 @media only screen and (min-width: 60em) {
-  /* line 240, ../sass/components/_pages.scss */
+  /* line 245, ../sass/components/_pages.scss */
   .caption-style li {
     display: inline-block;
     width: 33.1%;
   }
 
-  /* line 247, ../sass/components/_pages.scss */
+  /* line 252, ../sass/components/_pages.scss */
   .container-profile-dark img,
   .container-profile-dark .caption-bg,
   .caption-text {
@@ -2934,18 +2945,18 @@ a.window-btn:hover, a.window-btn:focus {
     left: calc(50% - 100px);
   }
 
-  /* line 252, ../sass/components/_pages.scss */
+  /* line 257, ../sass/components/_pages.scss */
   .caption-text {
     top: 40px;
   }
 
-  /* line 256, ../sass/components/_pages.scss */
+  /* line 261, ../sass/components/_pages.scss */
   .container-profile-dark h2 {
     margin-top: 10em;
   }
 }
 @media only screen and (min-width: 992px) {
-  /* line 264, ../sass/components/_pages.scss */
+  /* line 269, ../sass/components/_pages.scss */
   .container-profile-dark img,
   .container-profile-dark .caption-bg,
   .caption-text {
@@ -2954,29 +2965,29 @@ a.window-btn:hover, a.window-btn:focus {
     left: calc(50% - 115px);
   }
 
-  /* line 270, ../sass/components/_pages.scss */
+  /* line 275, ../sass/components/_pages.scss */
   .container-profile-dark h2 {
     margin-top: 12em;
   }
 
-  /* line 274, ../sass/components/_pages.scss */
+  /* line 279, ../sass/components/_pages.scss */
   .caption-text {
     top: 60px;
   }
 }
-/* line 279, ../sass/components/_pages.scss */
+/* line 284, ../sass/components/_pages.scss */
 .banner__secondary {
   padding: 5em 0;
   text-align: center;
   color: #fff;
 }
-/* line 283, ../sass/components/_pages.scss */
+/* line 288, ../sass/components/_pages.scss */
 .banner__secondary h2 {
   font-size: 48px;
   font-size: 3rem;
   margin: 0;
 }
-/* line 287, ../sass/components/_pages.scss */
+/* line 292, ../sass/components/_pages.scss */
 .banner__secondary h3 {
   font-size: 24px;
   font-size: 1.5rem;
@@ -2984,36 +2995,89 @@ a.window-btn:hover, a.window-btn:focus {
   font-weight: normal;
   color: #fff;
 }
-/* line 292, ../sass/components/_pages.scss */
+/* line 297, ../sass/components/_pages.scss */
 .banner__secondary h3:after {
   border: 0;
   width: 0;
 }
 
-/* line 299, ../sass/components/_pages.scss */
+/* line 304, ../sass/components/_pages.scss */
 .submit-a-session {
   margin-top: -6px;
   background: transparent url(../images/banner-tulips.jpg) no-repeat center center;
-  background-attachment: fixed;
   padding: 0;
 }
-/* line 304, ../sass/components/_pages.scss */
+@media only screen and (min-width: 60em) {
+  /* line 304, ../sass/components/_pages.scss */
+  .submit-a-session {
+    background-attachment: fixed;
+  }
+}
+/* line 311, ../sass/components/_pages.scss */
 .submit-a-session .pattern-reversed {
   padding: 5em 0;
 }
 
-/* line 309, ../sass/components/_pages.scss */
+/* line 316, ../sass/components/_pages.scss */
 .volunteer {
   background: #222;
 }
 
-/* line 313, ../sass/components/_pages.scss */
+/* line 320, ../sass/components/_pages.scss */
 .map {
   padding: 0;
+  height: 400px;
 }
-/* line 314, ../sass/components/_pages.scss */
+/* line 321, ../sass/components/_pages.scss */
 .map p {
   margin: 0;
+}
+/* line 326, ../sass/components/_pages.scss */
+.map img {
+  max-width: none;
+}
+/* line 329, ../sass/components/_pages.scss */
+.map #map-content {
+  color: #222;
+  text-align: left;
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  margin: .5em 1em;
+}
+/* line 337, ../sass/components/_pages.scss */
+.map #map-content h3 {
+  color: #222;
+  font-weight: bold;
+  line-height: 1.4;
+}
+/* line 342, ../sass/components/_pages.scss */
+.map p {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+/* line 344, ../sass/components/_pages.scss */
+.map p em {
+  font-weight: bold;
+}
+/* line 348, ../sass/components/_pages.scss */
+.map .directions a {
+  color: #005d93;
+  font-weight: bold;
+  margin: .5em 0;
+  display: block;
+  font-size: 16px;
+  font-size: 1rem;
+}
+/* line 354, ../sass/components/_pages.scss */
+.map .directions a:hover, .map .directions a:focus {
+  text-decoration: underline;
+}
+
+/* line 360, ../sass/components/_pages.scss */
+#custom-map {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 /* line 1, ../sass/components/_form.scss */

@@ -25,6 +25,7 @@
   <meta http-equiv="cleartype" content="on">
 
   <?php print $styles; ?>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
   <?php print $scripts; ?>
   <?php if ($add_html5_shim and !$add_respond_js): ?>
     <!--[if lt IE 9]>

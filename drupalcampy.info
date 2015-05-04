@@ -68,6 +68,7 @@ stylesheets[all][] = css/styles.css
 
 
 scripts[] = js/countdown.js
+scripts[] = js/map.js
 scripts[] = js/script.js
 
 

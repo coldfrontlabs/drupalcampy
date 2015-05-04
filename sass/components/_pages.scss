@@ -1,6 +1,6 @@
 
 .banner{
-  background: url('../images/main-banner.jpg');
+  background: #222 url('../images/main-banner.jpg');
   background-position: center -50px;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -32,7 +32,9 @@
     background: url('../images/main-banner.jpg');
     background-position: top center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    @media #{$tablet-landscape} {
+      background-attachment: fixed;
+    }
     @media #{$desktop-xlarge} {
       background-position: top center;
       background-size: 100%;
@@ -41,6 +43,9 @@
       height: 100%;
       width: 100%;
         padding: 5em 0 6em;
+        @media #{$tablet-landscape} {
+          padding: 7em 0 8em;
+        }        
         @media #{$desktop} {
           padding: 10em 0 11em;
         }
@@ -299,8 +304,10 @@ a.window-btn{
 .submit-a-session{
   margin-top: -6px;
   background: transparent url(../images/banner-tulips.jpg) no-repeat center center;
-  background-attachment: fixed;
   padding: 0;
+  @media #{$tablet-landscape} {
+    background-attachment: fixed;
+  }  
   .pattern-reversed{
     padding: 5em 0 ;
   }
@@ -315,7 +322,47 @@ a.window-btn{
     margin: 0;
   }
   padding: 0;
+  height: 400px;
+  img{
+    max-width: none; 
+  }
+  #map-content{
+    color: #222;
+    text-align: left;
+    font-family: $lato;
+    line-height: 1.4;
+    margin: .5em 1em;
+
+  }
+  #map-content h3{
+    color: #222;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+  p{
+    @include rem-fallback(font-size, .875);
+    em{
+      font-weight: bold;
+    }
+  }
+  .directions a{
+    color: $btn-dark-blue;
+    font-weight: bold;
+    margin: .5em 0;
+    display: block;
+    @include rem-fallback(font-size, 1);
+    &:hover, &:focus{
+      text-decoration: underline;
+    }
+  }
 }
+
+ #custom-map {
+  height: 100%;
+  margin: 0px;
+  padding: 0px
+
+ }
 
 
 
