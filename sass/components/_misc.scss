@@ -1167,7 +1167,7 @@ tr.selected td {
 }
 
 // set all view images to be
-.view-display-id-title_sponsor_block, 
+//.view-display-id-title_sponsor_block, 
 .view-display-id-sponsor_carousel_block{
   a img{
     @include filter(grayscale(1));

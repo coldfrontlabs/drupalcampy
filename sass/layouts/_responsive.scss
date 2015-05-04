@@ -208,3 +208,18 @@ $zen-auto-include-item-base: false;
     }
   }
 }
+
+.front #main .full-width-wrapper{
+  max-width: 100%;
+  #content{
+    padding: 0;
+  }
+  .full-width-wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.not-front #main{
+  padding-top: 6em;
+}

@@ -16,7 +16,7 @@
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
-    countdown(2015,6,24,8,0);
+    countdown(2015,7,24,8,0);
       // Add Close Button
     $('.header__mobile-secondary-menu').once('added-close-button', function(){
       $(this).before('<a class="btn-close">' + '<i class="i-cancel"></i><span>' + Drupal.t('Close') + '</span></a>');
