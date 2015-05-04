@@ -960,6 +960,36 @@ table {
   padding: 2em 0;
 }
 
+/* line 270, ../sass/layouts/_responsive.scss */
+.responsive .panel-2col-bricks .panel-col-top,
+.responsive .panel-2col-bricks .panel-col-middle,
+.responsive .panel-2col-bricks .panel-col-bottom,
+.responsive .panel-2col-bricks .panel-col-first,
+.responsive .panel-2col-bricks .panel-col-last {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  clear: left;
+}
+@media only screen and (min-width: 60em) {
+  /* line 277, ../sass/layouts/_responsive.scss */
+  .responsive .panel-2col-bricks .panel-col-first {
+    float: left;
+    width: 50%;
+    margin-left: 0%;
+    margin-right: -50%;
+  }
+  /* line 280, ../sass/layouts/_responsive.scss */
+  .responsive .panel-2col-bricks .panel-col-last {
+    float: left;
+    width: 50%;
+    margin-left: 50%;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+
 /* Custom Font */
 @font-face {
   font-family: 'drupalcamp-font';

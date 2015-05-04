@@ -260,3 +260,27 @@ $zen-auto-include-item-base: false;
   }
 }
 
+.responsive .panel-2col-bricks{
+  $zen-column-count: 6;
+
+  .panel-col-top,
+  .panel-col-middle,
+  .panel-col-bottom,
+  .panel-col-first,
+  .panel-col-last{
+    @include zen-grid-item(6, 1);
+    @include zen-clear();
+  }
+
+  @media #{$tablet-landscape} {
+
+    .panel-col-first{
+      @include zen-grid-item(3, 1)
+    }
+    .panel-col-last{
+      @include zen-grid-item(3, 4);
+      @include zen-clear(none);
+    }
+  }
+}
+
