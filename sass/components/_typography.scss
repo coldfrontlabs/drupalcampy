@@ -11,6 +11,7 @@ h3 {
     position: relative;
     color: $grey-text;
     font-weight: 300;
+    @include rem-fallback(font-size, 1.75);
 }
 
 h3:after {
@@ -26,16 +27,16 @@ h4 {
 	border-bottom: 1px solid;
 }
 
-a:link {
+a:link, 
+a:visited  {
   color: #0d70aa;
 }
-a:visited {
-  color: #555;
-}
+
 a:hover,
 a:focus {
   color: #1C6A9E;
 }
+
 a:active {
   color: #555;
 }

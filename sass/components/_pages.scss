@@ -285,18 +285,29 @@ a.window-btn{
   padding: 5em 0;
   text-align: center;
   color: #fff;
+  @media #{$tablet-landscape} {
+    padding: 8em 0;
+  }
   h2{
-    @include rem-fallback(font-size, 3);
     margin: 0;
+    @include rem-fallback(font-size, 2.5);
   }
   h3{
-    @include rem-fallback(font-size, 1.5);
+    @include rem-fallback(font-size, 1.2);
     margin: 0;
     font-weight: normal;
     color: #fff;
     &:after{
       border: 0;
       width: 0;
+    }
+  }
+  @media #{$tablet-landscape} {
+    h2{
+      @include rem-fallback(font-size, 3);
+    }
+    h3{
+      @include rem-fallback(font-size, 1.5);
     }
   }
 }
@@ -310,11 +321,14 @@ a.window-btn{
   }  
   .pattern-reversed{
     padding: 5em 0 ;
+    @media #{$tablet-landscape} {
+      padding: 8em 0;
+    }
   }
 }
 
 .volunteer{
-  background: #222;
+  background: #222 url(../images/dark-bg.jpg) center center;
 }
 
 .map{
@@ -334,10 +348,16 @@ a.window-btn{
     margin: .5em 1em;
 
   }
-  #map-content h3{
+  h3{
     color: #222;
     font-weight: bold;
     line-height: 1.4;
+    @include rem-fallback(font-size, 1.5);
+    margin: 0;
+    &:after{
+      border: 0;
+      width: 0;
+    }
   }
   p{
     @include rem-fallback(font-size, .875);
