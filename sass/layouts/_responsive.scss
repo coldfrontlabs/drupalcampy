@@ -231,6 +231,10 @@ $zen-auto-include-item-base: false;
   }
 }
 
+.panelizer-view-mode.node{
+  padding: 3em 0;
+}
+
 .page-about{
   $zen-column-count: 4;
   .panel-pane img{

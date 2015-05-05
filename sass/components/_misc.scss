@@ -45,6 +45,9 @@
   }
 }
 
+#page{
+  background-color: #fff;
+}
 
 /**
  * Accessibility features.
@@ -468,6 +471,19 @@ iframe{
  * Tabs.
  */
 
+// Turn of tabs for conference pages (links are in the main menu)
+.page-node-program{
+  .tabs-primary{
+    display: none;
+  }
+
+  .tabs-secondary{
+    margin-top: 1em;
+  }
+
+}
+
+
 /* Basic positioning styles shared by primary and secondary tabs. */
 %tabs {
   @include clearfix;
@@ -484,7 +500,6 @@ iframe{
   margin: 0 3px;
 }
 %tabs__tab-link {
-  border: 1px solid #e9e9e9;
   border-right: 0;
   border-bottom: 0;
   display: block;
@@ -498,8 +513,7 @@ iframe{
 }
 .tabs-primary__tab {
   @extend %tabs__tab;
-  @include border-top-radius(4px);
-  @include single-text-shadow(#fff, 1px, 1px, 0);
+  @include border-top-radius(3px);
   border: 1px solid $tabs-border;
   border-bottom-color: transparent;
   /* IE 9 and earlier don't understand gradients. */
@@ -516,19 +530,16 @@ iframe{
   @include border-top-radius(4px);
   @include transition(background-color 0.3s);
   color: #333;
-  background-color: #dedede;
+  background-color: $btn-light-grey;
   letter-spacing: 1px;
-  padding: 0 1em;
+  padding: .2em 1em .1em;
   text-align: center;
 }
 %tabs-primary__tab-link-is-hover {
-  background-color: #e9e9e9;
-  border-color: #f2f2f2;
+  background-color: #eee;
 }
 %tabs-primary__tab-link-is-active {
   background-color: transparent;
-  @include filter-gradient(rgba(#e9e9e9, 1), rgba(#e9e9e9, 0));
-  @include background-image(linear-gradient(rgba(#e9e9e9, 1), rgba(#e9e9e9, 0)));
   border-color: #fff;
 }
 
@@ -564,21 +575,22 @@ a.tabs-primary__tab-link.is-active {
 // We use 3 placeholder styles to prevent @extend from going selector crazy.
 %tabs-secondary__tab-link {
   @extend %tabs__tab-link;
-  @include border-radius(.75em);
-  @include transition(background-color 0.3s);
-  @include single-text-shadow(#fff, 1px, 1px, 0);
-  background-color: #f2f2f2;
+  @include border-radius( 1em);
+  @include transition(all 0.3s);
+  @include rem-fallback(font-size, 1);
+  background-color: $btn-light-grey;
   color: #666;
-  padding: 0 .5em;
+  padding: .3em 1em;
+  @include box-shadow(rgba(0,0,0,0.1) 1px 1px 3px inset);
 }
 %tabs-secondary__tab-link-is-focus {
-  background-color: #dedede;
-  border-color: #999;
-  color: #333;
+  background-color: $btn-dark-blue;
+  border-color: #000;
+  color: #fff;
 }
 %tabs-secondary__tab-link-is-active {
-  @include single-text-shadow(#333, 1px, 1px, 0);
-  background-color: #666;
+  //@include single-text-shadow(#333, 1px, 1px, 0);
+  background-color: $btn-dark-blue;
   border-color: #000;
   color: #fff;
 }
@@ -598,6 +610,7 @@ a.tabs-secondary__tab-link.is-active {
   @extend %tabs-secondary__tab-link;
   @extend %tabs-secondary__tab-link-is-active;
 }
+
 
 /**
  * Inline styles.
@@ -901,7 +914,11 @@ table td {
 thead {
   border-bottom: 3px solid $light-grey;
   font-size: 1.25em;
-  @include anti-aliasing
+  padding: 0.1em 0.6em;
+  @include anti-aliasing;
+  th{
+    text-align: left;
+  }
 }
 tr.even,
 tr.odd {
@@ -1150,7 +1167,14 @@ tr.selected td {
  *  Footer 
  */
 
+.front .region-footer{
+  margin-top: 0;
+  border: 0;
+}
+
 .region-footer{
+  border-top: 1px solid $btn-light-grey;
+  margin-top: 2em;
   .block-title{
     @include element-invisible;
   }
