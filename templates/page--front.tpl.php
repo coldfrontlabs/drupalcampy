@@ -120,7 +120,7 @@
           <div class="full-width-wrapper">
             <p><?php print t('July 24 2015'); ?> &middot; <span><?php print t('Ottawa'); ?></span>
             <h2><?php print t('All Things Drupal'); ?><br><span><?php print t("In Our Nation's Capital"); ?></span></h2>
-            <a href="/register"class="button window-btn"><?php print t('Register Now →'); ?></a>
+            <a href="/ticket/register"class="button window-btn"><?php print t('Register Now →'); ?></a>
           </div>
         </div>
       </section>
