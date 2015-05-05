@@ -15,7 +15,7 @@
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 170, ../sass/_mixins.scss */
+/* line 180, ../sass/_mixins.scss */
 .cf:before, .header__bar:before, .header__inside:before,
 .cf:after,
 .header__bar:after,
@@ -26,7 +26,7 @@
   /* 2 */
 }
 
-/* line 175, ../sass/_mixins.scss */
+/* line 185, ../sass/_mixins.scss */
 .cf:after, .header__bar:after, .header__inside:after {
   clear: both;
 }
@@ -35,7 +35,7 @@
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-/* line 183, ../sass/_mixins.scss */
+/* line 193, ../sass/_mixins.scss */
 .cf, .header__bar, .header__inside {
   *zoom: 1;
 }
@@ -2143,17 +2143,26 @@ label.option {
 a.button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: bold;
   color: white;
-  padding: .25em 1.5em;
+  padding: .5em 1.5em;
   border-radius: 3px;
   border: 1px solid #0d70aa;
   vertical-align: middle;
-  background: #0d70aa;
-  background-image: -webkit-linear-gradient(top, #0d70aa, #005d93);
-  background-image: -moz-linear-gradient(top, #0d70aa, #005d93);
-  background-image: -ms-linear-gradient(top, #0d70aa, #005d93);
-  background-image: -o-linear-gradient(top, #0d70aa, #005d93);
-  background-image: linear-gradient(to bottom, #0d70aa, #005d93);
+  background: #005d93;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+/* line 63, ../sass/_mixins.scss */
+a.button:link, a.button:visited {
+  color: white;
+}
+/* line 68, ../sass/_mixins.scss */
+a.button:hover, a.button:focus, a.button:active {
+  background: #003d60;
 }
 
 /* Password confirmation. */
@@ -3317,17 +3326,26 @@ input[type="text"] {
 .btn-sponsor {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: bold;
   color: white;
-  padding: .25em 1.5em;
+  padding: .5em 1.5em;
   border-radius: 3px;
   border: 1px solid #0d70aa;
   vertical-align: middle;
-  background: #0d70aa;
-  background-image: -webkit-linear-gradient(top, #0d70aa, #005d93);
-  background-image: -moz-linear-gradient(top, #0d70aa, #005d93);
-  background-image: -ms-linear-gradient(top, #0d70aa, #005d93);
-  background-image: -o-linear-gradient(top, #0d70aa, #005d93);
-  background-image: linear-gradient(to bottom, #0d70aa, #005d93);
+  background: #005d93;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+/* line 63, ../sass/_mixins.scss */
+.btn-sponsor:link, .btn-sponsor:visited {
+  color: white;
+}
+/* line 68, ../sass/_mixins.scss */
+.btn-sponsor:hover, .btn-sponsor:focus, .btn-sponsor:active {
+  background: #003d60;
 }
 
 /* line 13, ../sass/components/_form.scss */
@@ -3337,33 +3355,60 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: bold;
   color: white;
-  padding: .25em 1.5em;
+  padding: .5em 1.5em;
   border-radius: 3px;
   border: 1px solid #0d70aa;
   vertical-align: middle;
-  background: #0d70aa;
-  background-image: -webkit-linear-gradient(top, #0d70aa, #005d93);
-  background-image: -moz-linear-gradient(top, #0d70aa, #005d93);
-  background-image: -ms-linear-gradient(top, #0d70aa, #005d93);
-  background-image: -o-linear-gradient(top, #0d70aa, #005d93);
-  background-image: linear-gradient(to bottom, #0d70aa, #005d93);
+  background: #005d93;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+/* line 63, ../sass/_mixins.scss */
+button:link, button:visited,
+html input[type="button"]:link,
+html input[type="button"]:visited,
+input[type="reset"]:link,
+input[type="reset"]:visited,
+input[type="submit"]:link,
+input[type="submit"]:visited {
+  color: white;
+}
+/* line 68, ../sass/_mixins.scss */
+button:hover, button:focus, button:active,
+html input[type="button"]:hover,
+html input[type="button"]:focus,
+html input[type="button"]:active,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="reset"]:active,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:active {
+  background: #003d60;
 }
 
 /* line 17, ../sass/components/_form.scss */
 #edit-cancel {
   color: #444444;
-  padding: .25em 1.5em;
+  padding: .5em 1.5em;
   border-radius: 3px;
   background: #ebebeb;
-  background-image: -webkit-linear-gradient(top, #ebebeb, #dfdfdf);
-  background-image: -moz-linear-gradient(top, #ebebeb, #dfdfdf);
-  background-image: -ms-linear-gradient(top, #ebebeb, #dfdfdf);
-  background-image: -o-linear-gradient(top, #ebebeb, #dfdfdf);
-  background-image: linear-gradient(to bottom, #ebebeb, #dfdfdf);
   border: 1px solid #dadada;
   vertical-align: middle;
   margin-left: 1em;
+}
+/* line 81, ../sass/_mixins.scss */
+#edit-cancel:link, #edit-cancel:visited {
+  color: #444444;
+}
+/* line 86, ../sass/_mixins.scss */
+#edit-cancel:hover, #edit-cancel:focus, #edit-cancel:active {
+  background: #dfdfdf;
 }
 
 /* line 22, ../sass/components/_form.scss */

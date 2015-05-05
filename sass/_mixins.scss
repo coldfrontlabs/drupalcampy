@@ -51,31 +51,41 @@
 // Buttons
 @mixin primary-btn {
   @include anti-aliasing;
+  font-weight: bold;
   color: $white;
-  padding: .25em 1.5em;
+  padding: .5em 1.5em;
   border-radius: 3px;
   border: 1px solid $btn-blue-border;
   vertical-align: middle;
-  background: $btn-light-blue;
-  background-image: -webkit-linear-gradient(top, $btn-light-blue, $btn-dark-blue);
-  background-image: -moz-linear-gradient(top, $btn-light-blue, $btn-dark-blue);
-  background-image: -ms-linear-gradient(top, $btn-light-blue, $btn-dark-blue);
-  background-image: -o-linear-gradient(top, $btn-light-blue, $btn-dark-blue);
-  background-image: linear-gradient(to bottom, $btn-light-blue, $btn-dark-blue);
+  background: $btn-dark-blue;
+  @include ease(all, 150ms, ease-in-out);
+  &:link, 
+  &:visited{
+    color: $white;
+  }
+  &:hover, 
+  &:focus, 
+  &:active{
+    background: darken($btn-dark-blue, 10%);
+  }
 }
 
 @mixin secondary-btn {
   color: $body-text;
-  padding: .25em 1.5em;
+  padding: .5em 1.5em;
   border-radius: 3px;
-  background: #ebebeb;
-  background-image: -webkit-linear-gradient(top, $btn-light-grey, $btn-dark-grey);
-  background-image: -moz-linear-gradient(top, $btn-light-grey, $btn-dark-grey);
-  background-image: -ms-linear-gradient(top, $btn-light-grey, $btn-dark-grey);
-  background-image: -o-linear-gradient(top, $btn-light-grey, $btn-dark-grey);
-  background-image: linear-gradient(to bottom, $btn-light-grey, $btn-dark-grey);
+  background: $btn-light-grey;
   border: 1px solid $btn-grey-border;
   vertical-align: middle;
+  &:link, 
+  &:visited{
+    color: $body-text;
+  }
+  &:hover, 
+  &:focus, 
+  &:active{
+    background: $btn-dark-grey;
+  }
 }
 
 @mixin login-btn {
