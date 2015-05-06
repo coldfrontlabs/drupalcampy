@@ -45,6 +45,8 @@ $zen-auto-include-item-base: false;
 .region-sidebar-second,
 .panel-pane,
 .not-front .page__title,
+.view-display-id-page,
+.item-list li,
 #footer {
   // See the note about $zen-auto-include-item-base above.
   @include zen-grid-item-base();
@@ -54,7 +56,8 @@ $zen-auto-include-item-base: false;
 #header,
 #main,
 #footer, 
-.panel-pane {
+.panel-pane, 
+.item-list {
   @include zen-grid-container();
 }
 
@@ -79,7 +82,7 @@ $zen-auto-include-item-base: false;
 /**
  * Use 3 grid columns for smaller screens.
  */
-@media all and (min-width: 480px) and (max-width: 959px) {
+@media all and (min-width: 768px) and (max-width: 959px) {
 
   $zen-column-count: 3;
 
@@ -157,7 +160,7 @@ $zen-auto-include-item-base: false;
 /**
  * Use 5 grid columns for larger screens.
  */
-@media all and (min-width: 960px) {
+@media #{$tablet-landscape} {
 
   $zen-column-count: 5;
 
@@ -170,7 +173,7 @@ $zen-auto-include-item-base: false;
       @include zen-grid-item(4, 2);
     }
 
-    /* Span 1 column, starting in 1st column from left. */
+    /* Span 2 column, starting in 1st column from left. */
     .region-sidebar-first {
       @include zen-grid-item(1, 1);
     }
@@ -185,7 +188,7 @@ $zen-auto-include-item-base: false;
       @include zen-grid-item(4, 1);
     }
 
-    /* Span 1 column, starting in 5th column from left. */
+    /* Span 2 column, starting in 5th column from left. */
     .region-sidebar-second {
       @include zen-grid-item(1, 5);
     }
@@ -288,3 +291,95 @@ $zen-auto-include-item-base: false;
   }
 }
 
+/**
+ * Views Grids
+ */
+
+.view-cod-sponsors.view-display-id-page{
+  $zen-column-count: 4;
+  ul{
+    @include zero; 
+    li{
+      list-style-type: none;
+      @extend .cf;
+      margin-bottom: 1em;
+      a{
+        //border: 1px solid $btn-light-grey;
+        display: block;
+        padding: 0 1em; 
+        //@include border-radius(5px);
+        //@include box-shadow(rgba(0,0,0,0.1) 0 1px 4px);
+      }
+    }
+  }
+
+// Mobile Layout
+  .item-list{ margin-bottom: 3em;}
+  // Bronze
+  .item-list:nth-child(4){
+    li:nth-child(odd){
+      @include zen-grid-item(2, 1);
+      @include zen-clear();
+    }
+    li:nth-child(even){
+      @include zen-grid-item(2, 3);
+    }
+  } 
+
+// Mobile-Landscape/Tablet Layout
+  @media #{$mobile-landscape} {
+    // Gold
+    .item-list:nth-child(2), 
+    .item-list:nth-child(3){
+      li:nth-child(odd){
+        @include zen-grid-item(2, 1);
+        @include zen-clear();
+      }
+      li:nth-child(even){
+        @include zen-grid-item(2, 3);
+      }
+    }
+  }
+
+// Tablet-Landscape/Desktop Layout
+  @media #{$tablet-landscape} {
+    $zen-column-count: 6;
+    .item-list:nth-child(2) {
+      li:nth-child(1){
+        @include zen-grid-item(2, 1);
+        @include zen-clear();
+      }
+      li:nth-child(2){
+        @include zen-grid-item(2, 3);
+        @include zen-clear(none);
+      }
+      li:nth-child(3){
+        @include zen-grid-item(2, 5);
+        @include zen-clear(none);
+      }
+    }
+    .item-list:nth-child(3),
+    .item-list:nth-child(4){
+      $zen-column-count: 8;
+      li:nth-child(1){
+        @include zen-grid-item(2, 1);
+        @include zen-clear();
+      }
+      li:nth-child(2){
+        @include zen-grid-item(2, 3);
+        @include zen-clear(none);
+      }
+      li:nth-child(3){
+        @include zen-grid-item(2, 5);
+        @include zen-clear(none);
+      }
+      li:nth-child(4){
+        @include zen-grid-item(2, 7);
+        @include zen-clear(none);
+      }
+    }
+  }
+
+
+
+}

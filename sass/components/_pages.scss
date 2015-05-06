@@ -412,5 +412,14 @@ a.window-btn{
 
 
 
+/**
+ * Sidebar Styles
+ */
 
-
+.sidebars{
+  .button{
+    max-width: 200px;
+    display: block;
+    text-align: center;
+  }
+}

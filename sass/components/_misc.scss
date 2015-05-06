@@ -3,7 +3,7 @@
  * SMACSS Modules
  *
  * Adds modular sets of styles.
- *
+ *f
  * Additional useful selectors can be found in Zen's online documentation.
  * https://drupal.org/node/1707736
  */
@@ -472,7 +472,8 @@ iframe{
  */
 
 // Turn of tabs for conference pages (links are in the main menu)
-.page-node-program{
+.page-node-program, 
+.page-node-sponsors{
   .tabs-primary{
     display: none;
   }
@@ -1174,7 +1175,7 @@ tr.selected td {
 }
 
 .region-footer{
-  border-top: 1px solid $btn-light-grey;
+
   margin-top: 2em;
   .block-title{
     @include element-invisible;
@@ -1189,21 +1190,28 @@ tr.selected td {
 }
 
 #block-views-e66186f2ede5404df1d859352e3507e0{
-  padding: 2em 0 0;
+  ul{
+    @include zero;
+    li{
+      list-style-type: none;
+    }
+  }
+  padding: 0;
+  text-align: center;
   .block-title{
     @include element-invisible-off;
     @include rem-fallback(font-size, 3);
-    margin-bottom: .5em;
   }
-  text-align: center;
+  a{display: inline-block; margin-top: 2em;}
   img{
-    max-width: 240px;
+    max-width: 300px;
   }
 }
 
 // set all view images to be
 //.view-display-id-title_sponsor_block, 
-.view-display-id-sponsor_carousel_block{
+.view-display-id-sponsor_carousel_block, 
+.view-cod-sponsors{
   a img{
     @include filter(grayscale(1));
     @include opacity(.7);
