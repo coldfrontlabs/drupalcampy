@@ -337,8 +337,11 @@ a.window-btn{
   padding: 0;
   @media #{$tablet-landscape} {
     background-attachment: fixed;
+    background-size: cover; 
+  } 
+  @media #{$desktop-large} {
     background-size: 100%;
-  }  
+  } 
   .pattern-reversed{
     padding: 5em 0 ;
     @media #{$tablet-landscape} {
