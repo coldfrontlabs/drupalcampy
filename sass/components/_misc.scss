@@ -1175,16 +1175,25 @@ tr.selected td {
 }
 
 .region-footer{
+  text-align: center;
 
   margin-top: 2em;
   .block-title{
     @include element-invisible;
   }
   #site-name{
-    text-align: center;
     display: block;
     a{
       color: $body-text;
+    }
+  }
+  .colophon{
+    @include rem-fallback(font-size, .875);
+    color: lighten($body-text, 10%);
+    a{
+      color: lighten($body-text, 10%);
+      text-decoration: underline;
+      &:hover, &:focus{color: $body-text;}
     }
   }
 }

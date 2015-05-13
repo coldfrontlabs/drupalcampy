@@ -47,6 +47,7 @@ $zen-auto-include-item-base: false;
 .not-front .page__title,
 .view-display-id-page,
 .item-list li,
+.ds-1col.node-news .field,
 #footer {
   // See the note about $zen-auto-include-item-base above.
   @include zen-grid-item-base();
@@ -57,6 +58,7 @@ $zen-auto-include-item-base: false;
 #main,
 #footer, 
 .panel-pane, 
+.ds-1col,
 .item-list {
   @include zen-grid-container();
 }
@@ -215,7 +217,8 @@ $zen-auto-include-item-base: false;
   }
 }
 
-.front #main .full-width-wrapper{
+.front #main .full-width-wrapper, 
+.page-ottawa-drupal-association #main .full-width-wrapper{
   max-width: 100%;
   #content{
     padding: 0;
@@ -379,7 +382,39 @@ $zen-auto-include-item-base: false;
       }
     }
   }
+}
 
+.ds-1col.node-news{
+  margin: 2em 0;
+  $zen-column-count: 4;
+  .field-name-post-date{
+    float: left;
+    width: auto;
+    @include rem-fallback(padding, .2, .5);
+    @include rem-fallback(margin, 0, 0.5, 0, 0);
+    @include box-sizing(border-box);
+  }
+  .field-name-title {
+    @include rem-fallback(padding, .2, 0);
+    padding-left: 62px;
+    @include box-sizing(border-box);
+    width: auto;
+    h2{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  .field-name-body,
+  .field-name-node-link{
+    @include zen-grid-item(4, 1);
+    @include zen-clear();
+  }
 
+  @media #{$tablet} {
+    .field-name-post-date{
+      @include rem-fallback(padding, .2, 1, 0, .5);
+      @include rem-fallback(margin, 0, 1, 0, 0);
+    }
 
+  }
 }
