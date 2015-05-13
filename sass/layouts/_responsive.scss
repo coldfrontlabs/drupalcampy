@@ -217,8 +217,7 @@ $zen-auto-include-item-base: false;
   }
 }
 
-.front #main .full-width-wrapper, 
-.page-ottawa-drupal-association #main .full-width-wrapper{
+.front #main .full-width-wrapper{
   max-width: 100%;
   #content{
     padding: 0;
@@ -241,7 +240,8 @@ $zen-auto-include-item-base: false;
   padding: 3em 0;
 }
 
-.page-about{
+.page-about, 
+.page-ottawa-drupal-association{
   $zen-column-count: 4;
   .panel-pane img{
     max-width: 250px;
@@ -267,6 +267,23 @@ $zen-auto-include-item-base: false;
   }
   .panel-pane{
     padding: 2em 0;
+  }
+}
+
+.page-ottawa-drupal-association{
+  .dark-circle,
+  .light-circle{
+    margin: 2em 0;
+    @extend .cf;
+  }
+  .panel-pane{
+    padding: 2em 10px;
+  }
+  .panel-pane img{
+    @include zen-clear();
+    @include border-radius(50%);
+    border: 10px solid;
+    //margin: 2em auto;
   }
 }
 
@@ -415,6 +432,6 @@ $zen-auto-include-item-base: false;
       @include rem-fallback(padding, .2, 1, 0, .5);
       @include rem-fallback(margin, 0, 1, 0, 0);
     }
-
   }
 }
+
