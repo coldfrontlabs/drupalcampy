@@ -427,7 +427,7 @@ textarea {
     *vertical-align: middle; /* 4 */
   }
   max-width: 100%; /* 5 */
-  @include box-sizing(border-box); /* 5 */
+  //@include box-sizing(border-box); /* 5 */
 }
 
 /**

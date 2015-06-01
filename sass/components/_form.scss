@@ -1,6 +1,12 @@
-input[type="text"] {
-  height: 29px;
+input[type="text"], 
+input[type="email"],
+input[type="password"], 
+textarea {
   margin-right: 1em;
+  line-height: 1;
+  padding: .5em .5em;
+  @include rem-fallback(font-size, 1);
+  @include box-sizing(border-box);
 }
 
 .btn-sponsor {
@@ -22,9 +28,6 @@ input[type="submit"] {
 button, input, select, textarea {
   font-family: inherit;
   margin: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   border: 1px solid #e1e1e1;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -82,12 +85,7 @@ legend {
     @include element-invisible;
   }
   input, textarea{
-    padding: 1em;
     width: 100%;
-    &.email{
-      @include box-sizing(border-box);
-      height: 34px;
-    }
     &[type="submit"]{
       width: auto;
       @include ease(background, 150ms, ease-in-out);
