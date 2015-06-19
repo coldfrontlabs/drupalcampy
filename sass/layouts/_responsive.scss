@@ -337,7 +337,8 @@ $zen-auto-include-item-base: false;
 // Mobile Layout
   .item-list{ margin-bottom: 3em;}
   // Bronze
-  .item-list:nth-child(4){
+  .item-list:nth-child(4),
+  .item-list:nth-child(n+5){
     li:nth-child(odd){
       @include zen-grid-item(2, 1);
       @include zen-clear();
@@ -380,7 +381,8 @@ $zen-auto-include-item-base: false;
       }
     }
     .item-list:nth-child(3),
-    .item-list:nth-child(4){
+    .item-list:nth-child(4), 
+    .item-list:nth-child(n+5){
       $zen-column-count: 8;
       li:nth-child(1){
         @include zen-grid-item(2, 1);
