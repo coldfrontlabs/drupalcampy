@@ -187,8 +187,9 @@
   @extend .cf;
   height: 60px;
   background: #fff;
-  //padding-bottom: .5em;
+  @include box-shadow(rgba(0,0,0,0.2) 0px 2px 3px);
 }
+
 iframe{
   width: 100%;
 }
@@ -198,7 +199,8 @@ iframe{
 #navigation {
   /* Sometimes you want to prevent overlapping with main div. */
   /* overflow: hidden; */
-
+  @include box-shadow(rgba(0,0,0,0.2) 0px 1px 4px);
+  
   .block {
     margin-bottom: 0;
   }
@@ -262,10 +264,36 @@ iframe{
       &:hover,
       &:focus{
         background-color: darken($btn-dark-blue, 10%);
+        text-decoration: none;
       }
     }
   }
 }
+
+.header__inside .header__secondary-menu{
+  .login-link, 
+  .register-link{
+    display: inline-block;
+  }
+}
+ 
+.logged-in #mobile_navigation nav ul li{
+  .login-link, 
+  .register-link{
+    display: block;
+  }
+}
+
+// Hide login/register links when logged in
+.logged-in .header__inside .header__secondary-menu, 
+.logged-in #mobile_navigation nav ul li{
+  .login-link, 
+  .register-link{
+    display: none;
+  }
+}
+
+
 
 // Hide desktop menus on mobile
 .header__inside, 
@@ -359,6 +387,7 @@ iframe{
       &:focus{
         @include background(rgba(0,0,0,0.15));
         color: #000;
+        text-decoration: none;
       }
     }
   }

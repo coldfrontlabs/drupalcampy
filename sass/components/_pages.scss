@@ -488,3 +488,68 @@ a.window-btn{
 .gm-style-cc{
   min-width: 122px;
 }
+
+
+/**
+ *  Schedule 
+ */
+
+.view-cod-schedule{
+  .views-field.views-field-field-evttime-date-1,
+  .views-field.views-field-field-evttime-date-2{
+    color: $body-text;
+    position: relative;
+    padding: 2em 0;
+    border-bottom: 2px solid #666;
+    border-top: 2px solid #666;
+    background: #f5f5f5;
+    border-radius: 0;
+    @include box-shadow(rgba(0,0,0,0.2) 0px 2px 3px);
+    .date-display-single{
+      color: #fff;
+      height: 5px;
+      display: block;
+      overflow: hidden;
+    }
+    .date-display-range{
+      position: absolute;
+      top: 1.2em; 
+      left: .75em;
+      color: #666;
+      text-align: left;
+      font-size: 1.2em;
+      vertical-align: top;
+    }
+    .date-display-start,
+    .date-display-end{
+      @include rem-fallback(font-size, 1.75);
+      display: inline-block;
+      padding: 0 5px;
+    }
+  }
+  .views-field-name, 
+  .views-field-field-speakers{
+    padding-left: 0;
+    padding-right: 10px;
+    margin: 0;
+    padding-top: 0;
+    @media #{$tablet}{
+      padding-right: 36px;
+    } 
+  }
+
+  .view-content .views-row{
+    padding: 24px 3em 20px; 
+    @include box-sizing(border-box);
+  }
+}
+
+.page-node-schedule{
+  ul.quicktabs-tabs.quicktabs-style-zen li.active a,
+  ul.quicktabs-tabs.quicktabs-style-zen li.active a:hover{
+    background: none;
+    cursor: default;
+  }
+}
+
+
