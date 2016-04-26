@@ -123,7 +123,7 @@ function initialize() {
       '</div>'+
       '<h3 id="firstHeading">DrupalCamp Ottawa</h3>'+
       '<div id="bodyContent">'+
-      '<p><em>Friday July 24, 2015</em></p>'+
+      '<p><em>Friday July 22, 2016</em></p>'+
       '<p>Faculty of Social Sciences Building,<br>University of Ottawa<br>120 University Private<br>Ottawa, ON K1N 6N5</p>'+
       '<p class="directions"><a href="https://www.google.ca/maps/dir//Faculty+of+Social+Sciences+University+of+Ottawa,+120+University+Private,+Ottawa,+ON+K1N+6N5,+Canada/@45.421452,-75.683478,17z/data=!4m12!1m3!3m2!1s0x4cce0507e0c7bc07:0xb3254cb45b718161!2sFaculty+of+Social+Sciences+University+of+Ottawa!4m7!1m0!1m5!1m1!1s0x4cce0507e0c7bc07:0xb3254cb45b718161!2m2!1d-75.683478!2d45.421452">'+
       'Directions to DrupalCamp →</a></p>'+
