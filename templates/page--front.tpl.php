@@ -62,7 +62,7 @@
           </div> <!-- header__inside -->
 
           <!-- Menu Toggle Icon -->
-          <a class="menu-toggle" href="#main-menu"><i class="i-menu"></i><span><?php print t('Menu'); ?></span></a>  
+          <a class="menu-toggle" href="#main-menu"><i class="i-menu"></i><span><?php print t('Menu'); ?></span></a>
 
 
 
@@ -120,11 +120,11 @@
           <div class="full-width-wrapper">
             <p><?php print t('July 22 2016'); ?> &middot; <span><?php print t('Ottawa'); ?></span>
             <h2><?php print t('All Things Drupal'); ?><br><span><?php print t("In Our Nation's Capital"); ?></span></h2>
-            <a href="/drupalcamp-ottawa-2016/registration"class="button window-btn"><?php print t('Register Now →'); ?></a>
+            <?php l(t('Register Now') . ' →', 'drupalcamp-ottawa-2016/registration', array('html' => TRUE, 'attributes'=> array('class' => array('button', 'window-btn')),));?>
           </div>
         </div>
       </section>
-    
+
     </header>
 
 
@@ -192,7 +192,7 @@
         <?php print $sidebar_second; ?>
       </aside>
     <?php endif; ?>
-  
+
   </div> <!-- full-width-wrapper -->
 
 <?php
